@@ -89,6 +89,10 @@ a {
   height: 72px;
 }
 .logo-wrap {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
 .logo-wrap img {
   height: 36px;
   max-height: 36px;
