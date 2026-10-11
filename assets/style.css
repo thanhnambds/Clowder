@@ -88,6 +88,20 @@ a {
   height: 72px;
 }
 .logo-wrap {
+.logo-wrap img {
+  height: 36px;
+  max-height: 36px;
+  width: auto;
+  display: block;
+}
+.footer-logo img {
+  height: 32px;
+  max-height: 32px;
+  width: auto;
+  display: block;
+  margin-bottom: 14px;
+}
+
   display: flex;
   align-items: center;
   gap: 10px;
