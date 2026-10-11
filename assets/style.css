@@ -1542,3 +1542,84 @@ a {
     z-index: 3;
   }
 }
+
+
+/* ==========================================================================
+   BACK TO TOP FLOATING BUTTON WITH CIRCULAR PROGRESS
+   ========================================================================== */
+.back-to-top-btn {
+  position: fixed;
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-dark, #0f172a);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s ease,
+              background-color 0.2s ease;
+}
+.back-to-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+.back-to-top-btn:hover {
+  background: var(--color-primary, #00b289);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 178, 137, 0.45);
+  transform: translateY(-3px) scale(1.05);
+}
+.back-to-top-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+.progress-ring__circle {
+  stroke-dasharray: 131.95;
+  stroke-dashoffset: 131.95;
+  transition: stroke-dashoffset 0.1s ease-out;
+}
+.back-to-top-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s ease;
+}
+.back-to-top-btn:hover .back-to-top-icon {
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    right: 18px;
+    width: 44px;
+    height: 44px;
+  }
+  .progress-ring {
+    width: 44px;
+    height: 44px;
+  }
+}

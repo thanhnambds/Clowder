@@ -492,6 +492,20 @@
     </div>
   </footer>
 
+  <!-- Back to Top Floating Button with Circular Scroll Progress -->
+  <button id="backToTopBtn" class="back-to-top-btn" type="button" aria-label="Scroll back to top" title="Back to top">
+    <svg class="progress-ring" width="48" height="48" viewBox="0 0 48 48">
+      <circle class="progress-ring__circle-bg" stroke="rgba(0, 178, 137, 0.2)" stroke-width="3" fill="transparent" r="21" cx="24" cy="24"/>
+      <circle id="scrollProgressCircle" class="progress-ring__circle" stroke="#00b289" stroke-width="3" stroke-linecap="round" fill="transparent" r="21" cx="24" cy="24"/>
+    </svg>
+    <span class="back-to-top-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </span>
+  </button>
+
+
   <script>
     const menuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu');
@@ -516,6 +530,42 @@
         });
       });
     }
+  
+    // Back to top floating button logic
+    const bttBtn = document.getElementById('backToTopBtn');
+    const bttCircle = document.getElementById('scrollProgressCircle');
+    if (bttBtn && bttCircle) {
+      const circumference = 2 * Math.PI * 21;
+      bttCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+      bttCircle.style.strokeDashoffset = circumference;
+
+      function updateBttProgress() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight || 0;
+        const clientHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+        const docHeight = scrollHeight - clientHeight;
+
+        if (scrollTop > 280) {
+          bttBtn.classList.add('is-visible');
+        } else {
+          bttBtn.classList.remove('is-visible');
+        }
+
+        if (docHeight > 0) {
+          const progress = Math.min(Math.max(scrollTop / docHeight, 0), 1);
+          bttCircle.style.strokeDashoffset = circumference - (progress * circumference);
+        }
+      }
+
+      bttBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      window.addEventListener('scroll', updateBttProgress, { passive: true });
+      window.addEventListener('resize', updateBttProgress, { passive: true });
+      updateBttProgress();
+    }
+
   </script>
 </body>
 </html>
