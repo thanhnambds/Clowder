@@ -1,3 +1,4 @@
+html, body { overflow-x: hidden; max-width: 100vw; }
 :root {
   --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --color-primary: #00b289;
@@ -1420,4 +1421,82 @@ a {
 .btn-coming-soon:hover {
   background: #e2e8f0 !important;
   color: #475569 !important;
+}
+
+
+.swipe-hint {
+  display: none;
+  font-size: 12.5px;
+  color: #047857;
+  font-weight: 700;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+  align-items: center;
+  gap: 6px;
+}
+@media (max-width: 860px) {
+  .header-inner {
+    height: 60px;
+  }
+  .logo-wrap img {
+    height: 28px;
+    max-height: 28px;
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: -20px;
+    right: -20px;
+    width: calc(100% + 40px);
+    background: #ffffff;
+    flex-direction: column;
+    padding: 16px 24px 24px;
+    gap: 10px;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+    border-bottom: 2px solid var(--color-border);
+    border-top: 1px solid var(--color-border);
+    z-index: 999;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  .nav-menu li {
+    width: 100%;
+  }
+  .nav-menu .nav-link {
+    font-size: 15px;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .nav-menu .nav-cta {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    padding: 12px;
+    font-size: 14px;
+  }
+  .swipe-hint {
+    display: inline-flex;
+  }
+  .comp-table th:first-child,
+  .comp-table td:first-child {
+    position: sticky;
+    left: 0;
+    background: #ffffff;
+    z-index: 2;
+    box-shadow: 3px 0 6px -2px rgba(0, 0, 0, 0.1);
+  }
+  .comp-table th:first-child {
+    background: #f1f5f9;
+    z-index: 3;
+  }
 }

@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PETKIT Purobot Ultra: Specifications & Architectural Overview | Clowder</title>
+  <title>PETKIT Purobot Ultra: Specifications & Architectural Overview | ClowderHub</title>
   <meta name="robots" content="noindex, follow">
   <meta name="description" content="Technical overview of PETKIT Purobot Ultra. Compiled manufacturer specifications, 9.84 x 8.54 in opening, 10L waste bin, 20-sensor xSecure system, and 36 dB noise rating.">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
   <link rel="canonical" href="https://clowderhub.com/products/petkit-purobot-ultra.html">
@@ -22,10 +23,16 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="../index.html" class="logo-wrap"><img src="../assets/img/logo-clowderhub.png" alt="ClowderHub" width="180" height="36"></a>
+    
+      <button class="hamburger-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
       <nav>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="../index.html" class="nav-link">Home</a></li>
           <li><a href="../guides/best-automatic-litter-box.html" class="nav-link">All Automatic Boxes</a></li>
           <li><a href="../guides/best-self-cleaning-litter-box-for-multiple-cats.html" class="nav-link">Multi-Cat</a></li>
@@ -476,11 +483,36 @@
           <strong>FTC &amp; Trademark Disclosure:</strong> Clowder compiles published manufacturer specifications and publicly available consumer feedback. When you purchase through partner links on our site, we may earn an affiliate commission at no additional cost to you. Reference benchmark products are included without commercial affiliation. Product names and trademarks remain property of their respective holders. Specs read from manufacturer pages on Oct 9, 2026.
         </p>
         <p style="margin-top: 10px;">
-          &copy; 2026 Clowder. All rights reserved.
+          &copy; 2026 ClowderHub. All rights reserved.
         </p>
       </div>
     </div>
   </footer>
 
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    if (menuBtn && navMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        menuBtn.classList.toggle('active', isOpen);
+        menuBtn.setAttribute('aria-expanded', isOpen);
+      });
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !menuBtn.contains(e.target) && navMenu.classList.contains('open')) {
+          navMenu.classList.remove('open');
+          menuBtn.classList.remove('active');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          menuBtn.classList.remove('active');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
