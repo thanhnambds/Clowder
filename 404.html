@@ -8,8 +8,12 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/pages.css">
 </head>
-<body>
+<body class="page">
 
   <!-- HEADER -->
   <header class="site-header">
@@ -24,25 +28,42 @@
       </button>
       <nav>
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="guides/best-automatic-litter-box.html" class="nav-link">Best Automatic Boxes</a></li>
-          <li><a href="guides/best-self-cleaning-litter-box-for-multiple-cats.html" class="nav-link">Multi-Cat Guide</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="/index.html" class="nav-link">Home</a></li>
+          <li><a href="/guides/best-automatic-litter-box.html" class="nav-link">Best overall</a></li>
+          <li><a href="/guides/best-self-cleaning-litter-box-for-multiple-cats.html" class="nav-link">Multi-cat</a></li>
+          <li><a href="/guides/best-litter-box-for-large-cats.html" class="nav-link">Large cats</a></li>
+          <li><a href="/guides/litter-robot-alternatives.html" class="nav-link">Alternatives</a></li>
+          <li><a href="/guides/best-automatic-litter-box.html" class="nav-cta">Compare 5 Models &rarr;</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main style="padding: 90px 0 120px; text-align: center;">
-    <div class="article-container">
-      <div style="font-size: 64px; margin-bottom: 16px;"></div>
-      <h1 style="font-size: 36px; font-weight: 800; margin-bottom: 14px;">404 – Page Not Found</h1>
-      <p style="font-size: 17px; color: var(--color-slate); max-width: 520px; margin: 0 auto 30px; line-height: 1.6;">
-        The page you are looking for may have been moved, renamed, or does not exist.
-      </p>
-      <div style="display: flex; gap: 14px; justify-content: center;">
-        <a href="index.html" class="nav-cta" style="padding: 10px 22px;">Return to Home &rarr;</a>
-        <a href="guides/best-automatic-litter-box.html" style="display: inline-block; padding: 10px 22px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); font-weight: 600;">Explore Automatic Litter Boxes</a>
+  <main style="padding: 60px 0 100px;">
+    <div class="container">
+      <div class="page-404-hero">
+        <div style="text-align: left;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; color: var(--color-primary); font-weight: 700; margin-bottom: 12px; letter-spacing: 0.05em;">
+            Error 404 • Lost Track
+          </div>
+          <h1 style="font-size: clamp(32px, 5vw, 48px); font-weight: 800; line-height: 1.15; margin: 0 0 16px; color: var(--color-dark); letter-spacing: -0.02em;">
+            This page wandered off
+          </h1>
+          <p style="font-size: 17px; color: var(--color-slate); line-height: 1.6; margin: 0 0 28px; max-width: 480px;">
+            Like a curious cat investigating a closed door, you've found a corner of our site that doesn't exist or has moved to a new address.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="/guides/best-automatic-litter-box.html" class="nav-cta" style="padding: 12px 24px; font-size: 15px;">
+              Best automatic litter box &rarr;
+            </a>
+            <a href="/index.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; font-size: 15px; font-weight: 600; color: var(--color-dark); background: #fff; border: 1.5px solid var(--color-border); border-radius: 999px; text-decoration: none; transition: border-color 0.2s;">
+              Home
+            </a>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center;">
+          <img src="/assets/img/kitten-curious.jpg" alt="Curious kitten peeking" class="page-404-img" loading="eager">
+        </div>
       </div>
     </div>
   </main>

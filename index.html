@@ -9,6 +9,10 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/home.css">
 
   <!-- Open Graph -->
   <meta property="og:title" content="ClowderHub | Automatic Cat Litter Box Specification Comparisons">
@@ -28,15 +32,7 @@
   }
   </script>
 </head>
-<body>
-
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <aside class="announcement-bar">
-    <div class="container">
-      <span class="badge" style="text-transform: capitalize; font-size: 13px;">Specification Benchmark</span>
-      Specs compiled from manufacturer pages, with sources linked.
-    </div>
-  </aside>
+<body class="home">
 
   <!-- HEADER -->
   <header class="site-header">
@@ -62,176 +58,92 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section">
-    <div class="container hero-content">
-      <div class="hero-badge-row">
-        <span class="badge-pill">SMART PET CARE COMPILATION</span>
-        <span class="badge-pill" style="background:#e0f2fe; color:#0369a1;">SPECS FROM MANUFACTURERS</span>
+  <!-- HERO -->
+  <section class="hp-hero">
+    <div class="container hp-hero-grid">
+      <div class="hp-hero-copy">
+        <h1 class="hp-h1">Which automatic litter box fits your cat?</h1>
+        <p class="hp-lead">Real specs from the manufacturers, side by side. Pick by cat size, home and budget.</p>
+        <div class="hp-actions">
+          <a href="guides/best-automatic-litter-box.html" class="hp-btn hp-btn-main">Find my match</a>
+          <a href="#showdown" class="hp-btn hp-btn-ghost">See the comparison</a>
+        </div>
       </div>
-      <h1 class="hero-title">Automatic Litter Box Specs,<br><span style="color: var(--color-primary-dark);">Compared Side by Side</span></h1>
-      <p class="hero-subtitle">
-        Side-by-side engineering specifications compiled from official manufacturer documentation. Compare entryway dimensions, waste drawer capacities, and safety sensor arrays across leading automatic cat litter boxes.
-      </p>
+      <div class="hp-hero-media">
+        <img src="assets/img/litter-robot-5-lifestyle.jpg" alt="Two cats near a Litter-Robot 5 automatic litter box in a bright living room" width="1200" height="785" fetchpriority="high">
+        <span class="hp-chip hp-chip-spec"><small>Litter-Robot 5 entry</small><b>15.75 in</b></span>
+        <span class="hp-chip hp-chip-date">Updated Oct 2026</span>
+      </div>
+    </div>
+  </section>
 
-      <!-- 4 SUB-NICHE CARDS (ALL POINT TO OWN GUIDE PAGES) -->
-      <div class="niche-grid">
-        <a href="guides/best-automatic-litter-box.html" class="niche-card highlight">
-          <div>
-            <div class="niche-icon" style="display:flex; align-items:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-            </div>
-            <div class="niche-name">Best Automatic Boxes (Pillar)</div>
-            <div class="niche-desc">Master comparison covering self-cleaning, smart, and top models with 8-appliance specification matrix.</div>
-          </div>
-          <span class="niche-action">Read Master Comparison &rarr;</span>
+  <!-- START WITH YOUR SITUATION -->
+  <section class="hp-situations">
+    <div class="container">
+      <h2 class="hp-h2">Start with your situation</h2>
+      <div class="hp-tiles">
+        <a href="guides/best-automatic-litter-box.html" class="hp-tile">
+          <img src="assets/img/cat-hero.jpg" alt="Tabby cat looking up against a blue sky" width="800" height="800" loading="lazy">
+          <span>Best overall</span>
         </a>
-
-        <a href="guides/best-self-cleaning-litter-box-for-multiple-cats.html" class="niche-card">
-          <div>
-            <div class="niche-icon" style="display:flex; align-items:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <div class="niche-name">Multiple Cats (2+ Cats)</div>
-            <div class="niche-desc">Deep waste drawers, rapid cleaning resets, and multi-pet weight logging to monitor health.</div>
-          </div>
-          <span class="niche-action">View Multi-Cat Guide &rarr;</span>
+        <a href="guides/best-self-cleaning-litter-box-for-multiple-cats.html" class="hp-tile">
+          <img src="assets/img/cat-multi.jpg" alt="White cat looking up with wide eyes" width="800" height="1546" loading="lazy" style="object-position:50% 18%">
+          <span>Multiple cats</span>
         </a>
-
-        <a href="guides/best-litter-box-for-large-cats.html" class="niche-card">
-          <div>
-            <div class="niche-icon" style="display:flex; align-items:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
-            </div>
-            <div class="niche-name">Large Cats (15+ lbs)</div>
-            <div class="niche-desc">Open-top basins and extra-wide entries that suited for larger cats.</div>
-          </div>
-          <span class="niche-action">Explore Large Cat Guide &rarr;</span>
+        <a href="guides/best-litter-box-for-large-cats.html" class="hp-tile">
+          <img src="assets/img/cat-large-relax.jpg" alt="Large tabby cat lounging on a sofa" width="800" height="533" loading="lazy" style="object-position:38% 50%">
+          <span>Large cats</span>
         </a>
-
-        <a href="guides/litter-robot-alternatives.html" class="niche-card">
-          <div>
-            <div class="niche-icon" style="display:flex; align-items:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 9"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
-            </div>
-            <div class="niche-name">Litter-Robot Alternatives</div>
-            <div class="niche-desc">Alternative form factors, open-top basins, and price-tier comparisons against the baseline rotating globe.</div>
-          </div>
-          <span class="niche-action">See Alternatives &rarr;</span>
+        <a href="guides/litter-robot-alternatives.html" class="hp-tile">
+          <div class="hp-tile-img"><img src="assets/img/neakasa-m1-lifestyle.jpg" alt="Three cats around a Neakasa M1 open-top litter box" width="1000" height="1000" loading="lazy"></div>
+          <span>Litter-Robot alternatives</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- EDITORIAL GUIDES SECTION (HOMEPAGE 3-CARD GRID) -->
-  <section class="guides-section" id="guides">
+  <!-- START HERE -->
+  <section class="hp-start" id="guides">
     <div class="container">
-      <div class="section-header">
-        <div>
-          <div class="section-kicker">EDITORIAL BUYING BLUEPRINTS</div>
-          <h2 class="section-heading">In-Depth Hardware Guides &amp; Multi-Cat Blueprints</h2>
-        </div>
-        <a href="guides/best-automatic-litter-box.html" class="nav-link" style="color: var(--color-primary); font-weight: 700;">Explore Master Pillar &rarr;</a>
-      </div>
-
-      <div class="guides-grid">
-        <!-- CARD 1: PILLAR -->
-        <article class="guide-card">
-          <div class="guide-card-media">
-            <img src="assets/img/litter-robot-5.png" alt="Litter-Robot 5 self-cleaning cat litter box" width="800" height="450" loading="lazy" style="object-fit: contain; background: #f8fafc;">
-            <span class="guide-badge-tag" style="background:#059669;">CORE MASTER PILLAR</span>
-          </div>
-          <div class="guide-card-body">
-            <div class="guide-meta-row">
-              <span>12 Min Read</span> • <span>Master Comparison</span>
-            </div>
-            <h3 class="guide-title">
-              <a href="guides/best-automatic-litter-box.html">Best Automatic Litter Box (2026): Self-Cleaning &amp; Smart Models Compared</a>
-            </h3>
-            <p class="guide-excerpt">
-              The comprehensive pillar guide covering rotating globes, open-top basins, and mechanical rakes. Full 8-model specification matrix with sources linked.
-            </p>
-            <div class="guide-featured-box">
-              <strong>Featured Hardware:</strong> Litter-Robot 5 (Whisker) • Neakasa M1 Open-Top • PETKIT Purobot Series
-            </div>
-            <a href="guides/best-automatic-litter-box.html" class="guide-read-btn">
-              <span>Read Master Pillar</span> &rarr;
-            </a>
-          </div>
-        </article>
-
-        <!-- CARD 2: MULTIPLE CATS -->
-        <article class="guide-card">
-          <div class="guide-card-media">
-            <img src="assets/img/petkit-purobot-max-pro-2.png" alt="PETKIT Purobot Max Pro 2 smart automatic litter box" width="800" height="450" loading="lazy" style="object-fit: contain; background: #f8fafc;">
-            <span class="guide-badge-tag" style="background:#0284c7;">MULTI-CAT BLUEPRINT</span>
-          </div>
-          <div class="guide-card-body">
-            <div class="guide-meta-row">
-              <span>9 Min Read</span> • <span>2+ Cats</span>
-            </div>
-            <h3 class="guide-title">
-              <a href="guides/best-self-cleaning-litter-box-for-multiple-cats.html">Best Self-Cleaning Litter Box for Multiple Cats: Capacity &amp; Safety Ranked</a>
-            </h3>
-            <p class="guide-excerpt">
-              Why small waste drawers overflow in multi-cat homes — and how weight-tracking sensors distinguish between pets to monitor urinary patterns and prevent cycle ambushes.
-            </p>
-            <div class="guide-featured-box">
-              <strong>Featured Hardware:</strong> Whisker Litter-Robot 5 • Neakasa M1 • PETKIT Purobot Max Pro 2 
-            </div>
-            <a href="guides/best-self-cleaning-litter-box-for-multiple-cats.html" class="guide-read-btn">
-              <span>Read Multi-Cat Guide</span> &rarr;
-            </a>
-          </div>
-        </article>
-
-        <!-- CARD 3: LARGE CATS -->
-        <article class="guide-card">
-          <div class="guide-card-media">
-            <img src="assets/img/neakasa-m1.jpg" alt="Neakasa M1 open-top automatic cat litter box" width="800" height="450" loading="lazy" style="object-fit: contain; background: #f8fafc;">
-            <span class="guide-badge-tag" style="background:#d97706;">LARGE BREEDS &amp; OPEN-TOP</span>
-          </div>
-          <div class="guide-card-body">
-            <div class="guide-meta-row">
-              <span>8 Min Read</span> • <span>Large Breeds</span>
-            </div>
-            <h3 class="guide-title">
-              <a href="guides/best-litter-box-for-large-cats.html">Best Automatic Litter Box for Large Cats: Open-Top vs. Wide Opening</a>
-            </h3>
-            <p class="guide-excerpt">
-              Compare entry openings and stated cat weight limits for larger cats across open-top and rotating designs.
-            </p>
-            <div class="guide-featured-box">
-              <strong>Featured Hardware:</strong> Neakasa M1 Open-Top • Whisker Litter-Robot 5
-            </div>
-            <a href="guides/best-litter-box-for-large-cats.html" class="guide-read-btn">
-              <span>Read Large Cat Guide</span> &rarr;
-            </a>
-          </div>
-        </article>
+      <h2 class="hp-h2">Start here</h2>
+      <div class="hp-start-grid">
+        <a href="guides/best-automatic-litter-box.html" class="hp-start-item">
+          <div class="hp-start-top"><span class="hp-bignum" aria-hidden="true">1</span><div class="hp-start-thumb"><img src="assets/img/litter-robot-5.png" alt="" width="400" height="262" loading="lazy"></div></div>
+          <div class="hp-start-title">Best Automatic Litter Box (2026): Self-Cleaning &amp; Smart Models Compared</div>
+          <div class="hp-start-meta">12 min read · Master comparison</div>
+        </a>
+        <a href="guides/best-self-cleaning-litter-box-for-multiple-cats.html" class="hp-start-item">
+          <div class="hp-start-top"><span class="hp-bignum" aria-hidden="true">2</span><div class="hp-start-thumb"><img src="assets/img/petkit-purobot-max-pro-2.png" alt="" width="400" height="400" loading="lazy"></div></div>
+          <div class="hp-start-title">Best Self-Cleaning Litter Box for Multiple Cats</div>
+          <div class="hp-start-meta">9 min read · 2+ cats</div>
+        </a>
+        <a href="guides/best-litter-box-for-large-cats.html" class="hp-start-item">
+          <div class="hp-start-top"><span class="hp-bignum" aria-hidden="true">3</span><div class="hp-start-thumb"><img src="assets/img/neakasa-m1.jpg" alt="" width="400" height="350" loading="lazy"></div></div>
+          <div class="hp-start-title">Best Automatic Litter Box for Large Cats: Open-Top vs. Wide Opening</div>
+          <div class="hp-start-meta">8 min read · Large breeds</div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- HEAD-TO-HEAD COMPARISON MATRIX (EXPANDED TO 7 MODELS) -->
-  <section class="guides-section" id="showdown" style="background:#f8fafc; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+  <!-- HEAD-TO-HEAD COMPARISON -->
+  <section class="hp-compare" id="showdown">
     <div class="container">
-      <div class="section-header">
-        <div>
-          <div class="section-kicker">MANUFACTURER SPECIFICATION MATRIX</div>
-          <h2 class="section-heading">2026 Head-to-Head Specification Comparison (Top 3 Architectural Models)</h2>
-        </div>
+      <div class="hp-compare-head">
+        <h2 class="hp-h2">Top 3, head to head</h2>
+        <a href="guides/best-automatic-litter-box.html" class="hp-btn hp-btn-ghost">Full model matrix</a>
       </div>
 
       <div class="swipe-hint"><span>👉 Swipe horizontally to compare all specifications</span></div>
-      <div class="table-responsive" style="background: #ffffff;">
+      <div class="table-responsive">
         <table class="comp-table">
+          <caption style="position:absolute;left:-9999px">Specification comparison of Litter-Robot 5, Neakasa M1 and PETKIT Purobot Max Pro 2</caption>
           <thead>
             <tr>
-              <th style="width: 25%;">Specification</th>
-              <th style="width: 25%;" class="highlight-col">Litter-Robot 5 (Whisker)</th>
-              <th style="width: 25%;">Neakasa M1 (US listing: M1 Plus)</th>
-              <th style="width: 25%;">PETKIT Purobot Max Pro 2 (PETKIT)</th>
+              <th scope="col" style="width: 25%;"><span class="hp-th-name">Specification</span></th>
+              <th scope="col" style="width: 25%;" class="highlight-col"><img src="assets/img/litter-robot-5.png" alt="" width="120" height="79"><span class="hp-th-name">Litter-Robot 5</span><span class="hp-th-sub">Whisker · Globe</span></th>
+              <th scope="col" style="width: 25%;"><img src="assets/img/neakasa-m1.jpg" alt="" width="120" height="105"><span class="hp-th-name">Neakasa M1</span><span class="hp-th-sub">US listing: M1 Plus · Open-top</span></th>
+              <th scope="col" style="width: 25%;"><img src="assets/img/petkit-purobot-max-pro-2.png" alt="" width="120" height="120"><span class="hp-th-name">PETKIT Purobot Max Pro 2</span><span class="hp-th-sub">Cylinder</span></th>
             </tr>
           </thead>
           <tbody>
@@ -243,15 +155,15 @@
             </tr>
             <tr>
               <td><strong>Entry Opening Dimensions</strong></td>
-              <td class="highlight-col">15.75 x 15.75 in</td>
-              <td>Entry height: 13.86 in (width/depth not stated)</td>
-              <td>10.51 x 10.74 in; entrance height 10.03 in</td>
+              <td class="highlight-col"><span class="hp-num">15.75 x 15.75 in</span></td>
+              <td>Entry height: <span class="hp-num">13.86 in</span> (width/depth not stated)</td>
+              <td><span class="hp-num">10.51 x 10.74 in</span>; entrance height 10.03 in</td>
             </tr>
             <tr>
               <td><strong>Stated Cat Weight Limits</strong></td>
-              <td class="highlight-col">3–30 lbs, up to 5 cats</td>
-              <td>2.2–33 lbs</td>
-              <td>3.3–22 lbs</td>
+              <td class="highlight-col"><span class="hp-num">3–30 lbs</span>, up to 5 cats</td>
+              <td><span class="hp-num">2.2–33 lbs</span></td>
+              <td><span class="hp-num">3.3–22 lbs</span></td>
             </tr>
             <tr>
               <td><strong>Waste Bin Capacity</strong></td>
@@ -285,9 +197,9 @@
             </tr>
             <tr>
               <td><strong>Starting Pricing</strong></td>
-              <td class="highlight-col">As low as $799 (Litter-Robot 5 Pro: as low as $899, adds dual camera)</td>
-              <td>$379.99 (M1 Plus)*</td>
-              <td>$499.99 sale (regular $599.99)</td>
+              <td class="highlight-col">As low as <span class="hp-num">$799</span> (Litter-Robot 5 Pro: as low as $899, adds dual camera)</td>
+              <td><span class="hp-num">$379.99</span> (M1 Plus)*</td>
+              <td><span class="hp-num">$499.99</span> sale (regular $599.99)</td>
             </tr>
             <tr>
               <td><strong>Specification Profile</strong></td>
@@ -306,128 +218,82 @@
         </table>
       </div>
 
-      <div class="table-source-notes" style="font-size: 13px; color: var(--color-slate); margin-top: 16px; line-height: 1.6; border-top: 1px solid var(--color-border); padding-top: 12px;">
-        <p style="margin: 0 0 6px;"><strong>Primary Manufacturer Source Links:</strong></p>
-        <ul style="margin: 0 0 10px; padding-left: 20px;">
-          <li>Whisker: <a href="https://www.litter-robot.com/litter-robot-5.html" rel="nofollow noopener noreferrer" target="_blank">Whisker Litter-Robot 5 Official Product Page</a></li>
-          <li>Neakasa: <a href="https://neakasa.com/products/neakasa-m1-automatic-litter-box" rel="nofollow noopener noreferrer" target="_blank">Neakasa M1 Official Product Page</a></li>
-          <li>PETKIT: <a href="https://www.petkit.com/products/purobot-max-pro-2-automatic-cat-litter-box-with-ai-camera" rel="nofollow noopener noreferrer" target="_blank">PETKIT Purobot Max Pro 2 Official Product Page</a></li>
-        </ul>
-        <p style="margin: 0 0 6px;">
-          <strong>Verification &amp; Notes:</strong> Specs read from manufacturer pages on Oct 9, 2026.
-          <br>&bull; <em>Neakasa M1 Price:</em> The US listing read was the M1 Plus at $379.99 (regular $549.99); standard M1 price not shown.
-          <br>&bull; <em>Neakasa M1 Sensors:</em> Infrared count inconsistent on manufacturer page (5 vs 6 sets).
-          <br>&bull; <em>Litter-Robot 5 Sound:</em> dB not stated by manufacturer; page notes QuietSift technology minimizes noise.
-        </p>
-        <p style="margin: 0; color: var(--color-muted);">
-          <strong>Affiliate Disclosure:</strong> Links to Neakasa and PETKIT are partner links that may earn an affiliate commission at no additional cost to you. Litter-Robot 5 is included strictly as an uncompensated reference standard.
-        </p>
+      <div class="hp-fineprint">
+        <p><strong>Affiliate disclosure:</strong> Links to Neakasa and PETKIT are partner links that may earn a commission at no extra cost to you. Litter-Robot 5 is included as an uncompensated reference standard.</p>
+        <p>Specs read from manufacturer pages on Oct 9, 2026.</p>
+        <details>
+          <summary>Sources and verification notes</summary>
+          <ul>
+            <li>Whisker: <a href="https://www.litter-robot.com/litter-robot-5.html" rel="nofollow noopener noreferrer" target="_blank">Litter-Robot 5 official product page</a></li>
+            <li>Neakasa: <a href="https://neakasa.com/products/neakasa-m1-automatic-litter-box" rel="nofollow noopener noreferrer" target="_blank">Neakasa M1 official product page</a></li>
+            <li>PETKIT: <a href="https://www.petkit.com/products/purobot-max-pro-2-automatic-cat-litter-box-with-ai-camera" rel="nofollow noopener noreferrer" target="_blank">Purobot Max Pro 2 official product page</a></li>
+          </ul>
+          <p>&bull; <em>Neakasa M1 price:</em> The US listing read was the M1 Plus at $379.99 (regular $549.99); standard M1 price not shown.<br>
+          &bull; <em>Neakasa M1 sensors:</em> Infrared count inconsistent on the manufacturer page (5 vs 6 sets).<br>
+          &bull; <em>Litter-Robot 5 sound:</em> dB not stated by manufacturer; the page notes QuietSift technology minimizes noise.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- INDIVIDUAL PRODUCT PROFILES SECTION -->
-  <section class="guides-section" style="background:#f8fafc; border-top: 1px solid var(--color-border); padding: 56px 0;">
+  <!-- ALL MODELS -->
+  <section class="hp-models">
     <div class="container">
-      <div class="section-header-wrap" style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
-        <span class="section-tag" style="background:#e0f2fe; color:#0369a1;">INDIVIDUAL SPECIFICATION PROFILES</span>
-        <h2 style="font-size: 28px; font-weight: 800; color: var(--color-dark); margin: 8px 0 12px;">Dedicated Product Engineering Overviews</h2>
-        <p style="font-size: 15px; color: var(--color-slate); line-height: 1.6; margin: 0;">
-          Explore dedicated specification pages for individual self-cleaning cat litter box models with verified manufacturer engineering data, dimensions, and sensor architecture.
-        </p>
+      <h2 class="hp-h2">All five models</h2>
+      <div class="hp-models-grid">
+        <a href="products/litter-robot-5.html" class="hp-model">
+          <div class="hp-model-img" style="background:var(--hp-mint)"><img src="assets/img/litter-robot-5.png" alt="Whisker Litter-Robot 5" width="400" height="262" loading="lazy"></div>
+          <div class="hp-model-brand">Whisker · Globe</div>
+          <div class="hp-model-name">Litter-Robot 5</div>
+          <p class="hp-model-stat">15.75 x 15.75 in opening, 3–30 lbs</p>
+          <span class="hp-model-link">View specs &rarr;</span>
+        </a>
+        <a href="products/neakasa-m1.html" class="hp-model">
+          <div class="hp-model-img" style="background:var(--hp-sand)"><img src="assets/img/neakasa-m1.jpg" alt="Neakasa M1 open-top litter box" width="400" height="350" loading="lazy"></div>
+          <div class="hp-model-brand">Neakasa · Open-top</div>
+          <div class="hp-model-name">Neakasa M1 (M1 Plus)</div>
+          <p class="hp-model-stat">13.86 in entry height, 2.2–33 lbs</p>
+          <span class="hp-model-link">View specs &rarr;</span>
+        </a>
+        <a href="products/petkit-purobot-max-pro-2.html" class="hp-model">
+          <div class="hp-model-img" style="background:var(--hp-lav)"><img src="assets/img/petkit-purobot-max-pro-2.png" alt="PETKIT Purobot Max Pro 2" width="400" height="400" loading="lazy"></div>
+          <div class="hp-model-brand">PETKIT · Cylinder</div>
+          <div class="hp-model-name">Purobot Max Pro 2</div>
+          <p class="hp-model-stat">10.51 x 10.74 in opening, 8L bin, 35 dB</p>
+          <span class="hp-model-link">View specs &rarr;</span>
+        </a>
+        <a href="products/petkit-purobot-max-3.html" class="hp-model">
+          <div class="hp-model-img" style="background:var(--hp-blush)"><img src="assets/img/petkit-purobot-max-3.png" alt="PETKIT Purobot Max 3" width="400" height="400" loading="lazy"></div>
+          <div class="hp-model-brand">PETKIT · Cylinder</div>
+          <div class="hp-model-name">Purobot Max 3</div>
+          <p class="hp-model-stat">8.03 in low entry, 7L bin, 3.3–22 lbs</p>
+          <span class="hp-model-link">View specs &rarr;</span>
+        </a>
+        <a href="products/petkit-purobot-ultra.html" class="hp-model">
+          <div class="hp-model-img" style="background:var(--hp-mint)"><img src="assets/img/petkit-purobot-ultra.png" alt="PETKIT Purobot Ultra" width="400" height="400" loading="lazy"></div>
+          <div class="hp-model-brand">PETKIT · Auto-bagging</div>
+          <div class="hp-model-name">Purobot Ultra</div>
+          <p class="hp-model-stat">10L bin, 20-sensor xSecure, 36 dB</p>
+          <span class="hp-model-link">View specs &rarr;</span>
+        </a>
       </div>
+    </div>
+  </section>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-        <!-- CARD 1: LITTER-ROBOT 5 -->
-        <article class="guide-card" style="background:#fff;">
-          <div class="guide-card-media" style="background:#f8fafc; display:flex; align-items:center; justify-content:center; padding: 20px;">
-            <img src="assets/img/litter-robot-5.png" alt="Whisker Litter-Robot 5" width="400" height="260" loading="lazy" style="object-fit: contain; max-height: 200px;">
-            <span class="guide-badge-tag" style="background:#475569;">REFERENCE BENCHMARK</span>
-          </div>
-          <div class="guide-card-body">
-            <span class="prod-brand-tag" style="font-size: 11px;">WHISKER • ROTATING GLOBE</span>
-            <h3 class="guide-title" style="font-size: 18px; margin: 6px 0 10px;">
-              <a href="products/litter-robot-5.html">Litter-Robot 5</a>
-            </h3>
-            <p class="guide-excerpt" style="font-size: 13.5px; line-height: 1.5; margin-bottom: 16px;">
-              15.75" x 15.75" opening, multiple lasers + weight sensors, accommodating cats from 3 to 30 lbs.
-            </p>
-            <a href="products/litter-robot-5.html" class="guide-read-btn" style="text-align:center; display:block;">View Litter-Robot 5 Specs &rarr;</a>
-          </div>
-        </article>
-
-        <!-- CARD 2: NEAKASA M1 -->
-        <article class="guide-card" style="background:#fff;">
-          <div class="guide-card-media" style="background:#f8fafc; display:flex; align-items:center; justify-content:center; padding: 20px;">
-            <img src="assets/img/neakasa-m1.jpg" alt="Neakasa M1 open-top litter box" width="400" height="260" loading="lazy" style="object-fit: contain; max-height: 200px;">
-            <span class="guide-badge-tag" style="background:#0284c7;">OPEN-TOP BASIN</span>
-          </div>
-          <div class="guide-card-body">
-            <span class="prod-brand-tag" style="font-size: 11px;">NEAKASA • SIFTING BASIN</span>
-            <h3 class="guide-title" style="font-size: 18px; margin: 6px 0 10px;">
-              <a href="products/neakasa-m1.html">Neakasa M1 (M1 Plus)</a>
-            </h3>
-            <p class="guide-excerpt" style="font-size: 13.5px; line-height: 1.5; margin-bottom: 16px;">
-              Open-top sifting basin, 13.86" entrance step height, 11.23L waste container, 2.2 to 33 lbs range.
-            </p>
-            <a href="products/neakasa-m1.html" class="guide-read-btn" style="text-align:center; display:block;">View Neakasa M1 Specs &rarr;</a>
-          </div>
-        </article>
-
-        <!-- CARD 3: PETKIT PUROBOT MAX PRO 2 -->
-        <article class="guide-card" style="background:#fff;">
-          <div class="guide-card-media" style="background:#f8fafc; display:flex; align-items:center; justify-content:center; padding: 20px;">
-            <img src="assets/img/petkit-purobot-max-pro-2.png" alt="PETKIT Purobot Max Pro 2" width="400" height="260" loading="lazy" style="object-fit: contain; max-height: 200px;">
-            <span class="guide-badge-tag" style="background:#059669;">AI CAMERA CYLINDER</span>
-          </div>
-          <div class="guide-card-body">
-            <span class="prod-brand-tag" style="font-size: 11px;">PETKIT • ROTATING CYLINDER</span>
-            <h3 class="guide-title" style="font-size: 18px; margin: 6px 0 10px;">
-              <a href="products/petkit-purobot-max-pro-2.html">PETKIT Purobot Max Pro 2</a>
-            </h3>
-            <p class="guide-excerpt" style="font-size: 13.5px; line-height: 1.5; margin-bottom: 16px;">
-              10.51 x 10.74 in opening, 8L waste bin, 35 dB sound level, 180° AI camera recognition.
-            </p>
-            <a href="products/petkit-purobot-max-pro-2.html" class="guide-read-btn" style="text-align:center; display:block;">View Purobot Max Pro 2 Specs &rarr;</a>
-          </div>
-        </article>
-
-        <!-- CARD 4: PETKIT PUROBOT MAX 3 -->
-        <article class="guide-card" style="background:#fff;">
-          <div class="guide-card-media" style="background:#f8fafc; display:flex; align-items:center; justify-content:center; padding: 20px;">
-            <img src="assets/img/petkit-purobot-max-3.png" alt="PETKIT Purobot Max 3" width="400" height="260" loading="lazy" style="object-fit: contain; max-height: 200px;">
-            <span class="guide-badge-tag" style="background:#166534;">LOW STEP-IN</span>
-          </div>
-          <div class="guide-card-body">
-            <span class="prod-brand-tag" style="font-size: 11px;">PETKIT • ROTATING CYLINDER</span>
-            <h3 class="guide-title" style="font-size: 18px; margin: 6px 0 10px;">
-              <a href="products/petkit-purobot-max-3.html">PETKIT Purobot Max 3</a>
-            </h3>
-            <p class="guide-excerpt" style="font-size: 13.5px; line-height: 1.5; margin-bottom: 16px;">
-              Low 8.03 in entrance height, 7L waste bin, 12 sensors with anti-pinch structure, 3.3 to 22 lbs.
-            </p>
-            <a href="products/petkit-purobot-max-3.html" class="guide-read-btn" style="text-align:center; display:block;">View Purobot Max 3 Specs &rarr;</a>
-          </div>
-        </article>
-
-        <!-- CARD 5: PETKIT PUROBOT ULTRA -->
-        <article class="guide-card" style="background:#fff;">
-          <div class="guide-card-media" style="background:#f8fafc; display:flex; align-items:center; justify-content:center; padding: 20px;">
-            <img src="assets/img/petkit-purobot-ultra.png" alt="PETKIT Purobot Ultra" width="400" height="260" loading="lazy" style="object-fit: contain; max-height: 200px;">
-            <span class="guide-badge-tag" style="background:#7e22ce;">AUTO-SEAL CYLINDER</span>
-          </div>
-          <div class="guide-card-body">
-            <span class="prod-brand-tag" style="font-size: 11px;">PETKIT • AUTOMATED BAGGING</span>
-            <h3 class="guide-title" style="font-size: 18px; margin: 6px 0 10px;">
-              <a href="products/petkit-purobot-ultra.html">PETKIT Purobot Ultra</a>
-            </h3>
-            <p class="guide-excerpt" style="font-size: 13.5px; line-height: 1.5; margin-bottom: 16px;">
-              Automatic bag packing & sealing, 10L waste bin, 20-sensor xSecure system, 36 dB operating sound.
-            </p>
-            <a href="products/petkit-purobot-ultra.html" class="guide-read-btn" style="text-align:center; display:block;">View Purobot Ultra Specs &rarr;</a>
-          </div>
-        </article>
+  <!-- HOW WE WORK -->
+  <section class="hp-method">
+    <div class="container hp-method-grid">
+      <div class="hp-method-copy">
+        <h2 class="hp-disp">We compile specs. We don't test products.</h2>
+        <p>Every figure comes from the manufacturer's own page, with the source linked and the date we read it.</p>
+        <div class="hp-facts">
+          <div class="hp-fact"><b>5</b><span>models profiled</span></div>
+          <div class="hp-fact"><b>Oct 9</b><span>last data check, 2026</span></div>
+          <div class="hp-fact"><b>0</b><span>products tested by us</span></div>
+        </div>
+        <div><a href="methodology.html" class="hp-btn hp-btn-amber">Read our methodology</a></div>
       </div>
+      <img class="hp-arch" src="assets/img/cat-clean-home.jpg" alt="Kitten reaching for a toy above a scratching post" width="800" height="1350" loading="lazy">
     </div>
   </section>
 
@@ -442,7 +308,6 @@
           </p>
           <div style="display: flex; gap: 10px;">
             <span style="background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; font-size: 11px;">We Do Not Test Products Ourselves</span>
-            <span style="background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; font-size: 11px;">SSL Secure Browsing</span>
           </div>
         </div>
 

@@ -9,6 +9,10 @@
   <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/pages.css">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Best Automatic Litter Box (2026): Self-Cleaning & Smart Models Compared">
@@ -66,15 +70,7 @@
   }
   </script>
 </head>
-<body>
-
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <aside class="announcement-bar">
-    <div class="container">
-      <span class="badge">BUYER'S BLUEPRINT</span>
-      Manufacturer Specification Comparison: Self-Cleaning, Smart &amp; Automatic Cat Litter Boxes.
-    </div>
-  </aside>
+<body class="page">
 
   <!-- HEADER -->
   <header class="site-header">
@@ -90,11 +86,11 @@
       <nav>
         <ul class="nav-menu" id="nav-menu">
           <li><a href="../index.html" class="nav-link">Home</a></li>
-          <li><a href="best-automatic-litter-box.html" class="nav-link active">All Automatic Boxes</a></li>
-          <li><a href="best-self-cleaning-litter-box-for-multiple-cats.html" class="nav-link">Multi-Cat</a></li>
-          <li><a href="best-litter-box-for-large-cats.html" class="nav-link">Large Cats</a></li>
+          <li><a href="best-automatic-litter-box.html" class="nav-link active">Best overall</a></li>
+          <li><a href="best-self-cleaning-litter-box-for-multiple-cats.html" class="nav-link">Multi-cat</a></li>
+          <li><a href="best-litter-box-for-large-cats.html" class="nav-link">Large cats</a></li>
           <li><a href="litter-robot-alternatives.html" class="nav-link">Alternatives</a></li>
-          <li><a href="#matrix" class="nav-cta">Compare 8 Models →</a></li>
+          <li><a href="#leaderboard" class="nav-cta">Compare 5 Models →</a></li>
         </ul>
       </nav>
     </div>
@@ -142,109 +138,123 @@
     <!-- MAIN BODY -->
     <div class="article-container">
 
-      <!-- TOP PICKS GRID -->
-      <section style="margin: 28px 0 10px;">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 8px;">
-          <div>
-            <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary);">MODELS COMPARED</div>
-            <h2 style="font-size: 24px; font-weight: 800; margin: 4px 0 0; color: var(--color-dark);">Models Overview</h2>
-          </div>
-          <span style="font-size: 13px; color: var(--color-muted);">Specs read from manufacturer pages on Oct 9, 2026</span>
+      <!-- THE SHORT ANSWER BLOCK -->
+      <section class="short-answer-section" id="short-answer">
+        <div class="short-answer-header">
+          <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary);">THE SHORT ANSWER</div>
+          <h2 style="font-size: 26px; font-weight: 800; margin: 4px 0 0; color: var(--color-dark);">Top Recommendations at a Glance</h2>
         </div>
 
-        <div class="top-picks-grid">
+        <div class="short-answer-grid">
           <!-- CARD 1 -->
-          <div class="top-pick-card featured-pick">
-            <div class="top-pick-header">
-              <span class="top-pick-badge">ROTATING GLOBE</span>
-              <span class="aff-badge benchmark" style="margin:0;">No Commission</span>
-            </div>
-            <div class="top-pick-media">
-              <img src="../assets/img/litter-robot-5.png" alt="Litter-Robot 5 automatic cat litter box" loading="lazy" style="object-fit: contain; background: #f8fafc;">
-            </div>
-            <h3 class="top-pick-title">Litter-Robot 5</h3>
-            <p style="font-size: 13px; color: var(--color-muted); margin: 0 0 12px;">WHISKER • ROTATING GLOBE</p>
-            <ul class="top-pick-bullets">
-              <li>15.75" x 15.75" entry opening</li>
-              <li>3–30 lbs cat weight limit, up to 5 cats</li>
-              <li>Multiple lasers + weight sensor technology</li>
-            </ul>
-            <div class="top-pick-cta-wrap">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="font-size: 12px; color: var(--color-muted); font-weight: 600;">PRICING:</span>
-                <span style="font-size: 13px; font-weight: 700; color: var(--color-dark);">As low as $799</span>
+          <div class="short-answer-card">
+            <div>
+              <div class="short-answer-kicker">BEST OVERALL • ROTATING GLOBE</div>
+              <img src="../assets/img/litter-robot-5.png" alt="Litter-Robot 5 automatic cat litter box" class="short-answer-img" loading="lazy">
+              <h3 class="short-answer-name">Litter-Robot 5</h3>
+              <div class="short-answer-stat-row">
+                <div class="short-answer-stat">
+                  <div class="short-answer-stat-val">15.75"</div>
+                  <div class="short-answer-stat-lbl">Entry Sq</div>
+                </div>
+                <div class="short-answer-stat">
+                  <div class="short-answer-stat-val">3–30 lbs</div>
+                  <div class="short-answer-stat-lbl">Cat Weight</div>
+                </div>
               </div>
-              <a href="#" class="btn-leaderboard-cta btn-coming-soon" rel="nofollow noopener noreferrer" style="text-align: center;">Coming soon</a>
+              <p class="short-answer-desc">
+                Enclosed rotating globe with wide 15.75" opening, multiple laser and weight sensor layers, supporting up to 5 cats. Benchmark standard.
+              </p>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 700; color: var(--color-dark); margin-bottom: 8px;">As low as $799 <span class="aff-badge benchmark" style="margin: 0 0 0 6px;">No Commission</span></div>
+              <a href="#review-litter-robot" class="short-answer-link">View specs &amp; review &rarr;</a>
             </div>
           </div>
 
           <!-- CARD 2 -->
-          <div class="top-pick-card">
-            <div class="top-pick-header">
-              <span class="top-pick-badge" style="background:#e0f2fe; color:#0369a1;">OPEN-TOP BASIN</span>
-              <span class="aff-badge sponsored" style="margin:0;">Partner Link</span>
-            </div>
-            <div class="top-pick-media">
-              <img src="../assets/img/neakasa-m1.jpg" alt="Neakasa M1 open-top cat litter box" loading="lazy" style="object-fit: contain; background: #f8fafc;">
-            </div>
-            <h3 class="top-pick-title">Neakasa M1 (US listing: M1 Plus)</h3>
-            <p style="font-size: 13px; color: var(--color-muted); margin: 0 0 12px;">NEAKASA • OPEN-TOP SIFTING BASIN</p>
-            <ul class="top-pick-bullets">
-              <li>Open-top basin with 13.86" entry height</li>
-              <li>2.2–33 lbs cat weight range</li>
-              <li>11.23L waste bin (about 14 days for one cat)</li>
-            </ul>
-            <div class="top-pick-cta-wrap">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="font-size: 12px; color: var(--color-muted); font-weight: 600;">PRICING:</span>
-                <span style="font-size: 13px; font-weight: 700; color: var(--color-dark);">$379.99 (M1 Plus)*</span>
+          <div class="short-answer-card">
+            <div>
+              <div class="short-answer-kicker">BEST FOR BIG CATS • OPEN-TOP</div>
+              <img src="../assets/img/neakasa-m1.jpg" alt="Neakasa M1 open-top cat litter box" class="short-answer-img" loading="lazy">
+              <h3 class="short-answer-name">Neakasa M1</h3>
+              <div class="short-answer-stat-row">
+                <div class="short-answer-stat">
+                  <div class="short-answer-stat-val">13.86"</div>
+                  <div class="short-answer-stat-lbl">Step In</div>
+                </div>
+                <div class="short-answer-stat">
+                  <div class="short-answer-stat-val">11.23L</div>
+                  <div class="short-answer-stat-lbl">Waste Bin</div>
+                </div>
               </div>
-              <a href="#" class="btn-leaderboard-cta btn-coming-soon" rel="sponsored noopener noreferrer" style="text-align: center;">Coming soon</a>
+              <p class="short-answer-desc">
+                Open-top sifting basin for cats that refuse enclosed drums. Low entry, large 11.23L bin capacity, and 2.2–33 lbs weight range.
+              </p>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 700; color: var(--color-dark); margin-bottom: 8px;">$379.99 (M1 Plus)* <span class="aff-badge sponsored" style="margin: 0 0 0 6px;">Partner Link</span></div>
+              <a href="#review-neakasa-m1" class="short-answer-link">View specs &amp; review &rarr;</a>
             </div>
           </div>
 
           <!-- CARD 3 -->
-          <div class="top-pick-card">
-            <div class="top-pick-header">
-              <span class="top-pick-badge" style="background:#fdf2f8; color:#be185d;">ROTATING CYLINDER</span>
-              <span class="aff-badge sponsored" style="margin:0;">Partner Link</span>
-            </div>
-            <div class="top-pick-media">
-              <img src="../assets/img/petkit-purobot-max-pro-2.png" alt="PETKIT Purobot Max Pro 2 smart cat litter box" loading="lazy" style="object-fit: contain; background: #f8fafc;">
-            </div>
-            <h3 class="top-pick-title">PETKIT Purobot Max Pro 2</h3>
-            <p style="font-size: 13px; color: var(--color-muted); margin: 0 0 12px;">PETKIT • ROTATING CYLINDER</p>
-            <ul class="top-pick-bullets">
-              <li>10.51 x 10.74 in entry (entrance height 10.03 in)</li>
-              <li>3.3–22 lbs cat weight limit</li>
-              <li>8L waste bin (up to 17 days for one cat), 35 dB</li>
-            </ul>
-            <div class="top-pick-cta-wrap">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="font-size: 12px; color: var(--color-muted); font-weight: 600;">PRICING:</span>
-                <span style="font-size: 13px; font-weight: 700; color: var(--color-dark);">$499.99 sale</span>
+          <div class="short-answer-card">
+            <div>
+              <div class="short-answer-kicker">BEST VALUE &amp; QUIET • CYLINDER</div>
+              <img src="../assets/img/petkit-purobot-max-pro-2.png" alt="PETKIT Purobot Max Pro 2 smart cat litter box" class="short-answer-img" loading="lazy">
+              <h3 class="short-answer-name">PETKIT Max Pro 2</h3>
+              <div class="short-answer-stat-row">
+                <div class="short-answer-stat">
+                  <div class="short-answer-stat-val">35 dB</div>
+                  <div class="short-answer-stat-lbl">Noise Level</div>
+                </div>
+                <div class="short-answer-stat">
+                  <div class="short-answer-stat-val">8L / 17d</div>
+                  <div class="short-answer-stat-lbl">Capacity</div>
+                </div>
               </div>
-              <a href="#" class="btn-leaderboard-cta btn-coming-soon" rel="sponsored noopener noreferrer" style="text-align: center;">Coming soon</a>
+              <p class="short-answer-desc">
+                Whisper-quiet rotating cylinder with integrated AI camera, 12 safety sensors, and low 10.03" step-in height.
+              </p>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 700; color: var(--color-dark); margin-bottom: 8px;">$499.99 sale <span class="aff-badge sponsored" style="margin: 0 0 0 6px;">Partner Link</span></div>
+              <a href="#review-petkit" class="short-answer-link">View specs &amp; review &rarr;</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- NAVIGATION HUB TO COMPANION GUIDES -->
-      <section style="background: #f1f5f9; border: 1px solid var(--color-border); border-radius: 8px; padding: 20px; margin: 30px 0;">
-        <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">Explore In-Depth Need-Based Guides:</h3>
-        <p style="font-size: 14px; color: var(--color-slate); margin-bottom: 12px;">
-          Looking for a specific household scenario? Consult our dedicated requirement blueprints:
-        </p>
-        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px;">
-          <a href="best-self-cleaning-litter-box-for-multiple-cats.html" style="color: var(--color-primary); font-weight: 600;">&rarr; Best Self-Cleaning Litter Box for Multiple Cats (Capacity &amp; Sensor Safety)</a>
-          <a href="best-litter-box-for-large-cats.html" style="color: var(--color-primary); font-weight: 600;">&rarr; Best Automatic Litter Box for Large Cats (Open-Top vs. Wide Opening)</a>
-          <a href="litter-robot-alternatives.html" style="color: var(--color-primary); font-weight: 600;">&rarr; Top Litter-Robot Alternatives (Budget &amp; Form-Factor Options)</a>
-        </div>
-      </section>
+      <!-- MOBILE TOC CHIPS -->
+      <nav class="guide-toc-chips" aria-label="Jump to guide section">
+        <a href="#short-answer" class="guide-toc-chip">Overview</a>
+        <a href="#architectures" class="guide-toc-chip">Architectures</a>
+        <a href="#leaderboard" class="guide-toc-chip">Comparison Matrix</a>
+        <a href="#how-to-choose" class="guide-toc-chip">How to Choose</a>
+        <a href="#reviews" class="guide-toc-chip">Model Deep Dives</a>
+        <a href="#faq" class="guide-toc-chip">FAQ</a>
+      </nav>
+
+      <!-- 2-COLUMN GUIDE LAYOUT WITH STICKY TOC -->
+      <div class="guide-layout">
+        <aside class="guide-toc-sidebar" aria-label="Table of contents">
+          <div class="guide-toc-title">Table of Contents</div>
+          <ul class="guide-toc-list">
+            <li><a href="#short-answer">Top Recommendations</a></li>
+            <li><a href="#architectures">1. Operating Architectures</a></li>
+            <li><a href="#leaderboard">2. Comparison Matrix</a></li>
+            <li><a href="#how-to-choose">3. How to Choose</a></li>
+            <li><a href="#reviews">4. Model Deep Dives</a></li>
+            <li><a href="#faq">5. Questions &amp; Answers</a></li>
+            <li><a href="#keep-reading">Companion Blueprints</a></li>
+          </ul>
+        </aside>
+
+        <div class="guide-main-col">
 
       <!-- SECTION 1: HOW AUTOMATIC LITTER BOXES WORK -->
-      <section class="content-section">
+      <section class="content-section" id="architectures">
         <h2>1. The 3 Primary Operating Architectures Explained</h2>
         <p>
           While marketed under various names—automatic, self-cleaning, or smart—nearly all modern motorized cat litter boxes rely on one of three structural mechanisms:
@@ -470,30 +480,34 @@
       </section>
 
       <!-- SECTION 3: KEY EVALUATION CRITERIA -->
-      <section class="content-section">
+      <section class="content-section" id="how-to-choose">
         <h2>3. How to Choose: Key Selection Criteria</h2>
-        <div style="display: grid; gap: 14px; margin-top: 14px;">
-          <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:16px; border-radius:8px;">
-            <strong style="color:var(--color-primary); font-size:16px;">01. Entry Opening &amp; Weight Limits</strong>
-            <p style="margin:6px 0 0; font-size:14.5px;">Compare published entry dimensions (ranging from 10.51" x 10.74" on rotating cylinders to 15.75" x 15.75" on rotating globes) against manufacturer cat weight ratings.</p>
+        <div class="htc-grid">
+          <div class="htc-card pastel-1">
+            <div class="htc-num">01</div>
+            <h3 class="htc-title">Entry Opening &amp; Weight Limits</h3>
+            <p class="htc-desc">Compare published entry dimensions (ranging from 10.51" x 10.74" on rotating cylinders to 15.75" x 15.75" on rotating globes) against manufacturer cat weight ratings.</p>
           </div>
-          <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:16px; border-radius:8px;">
-            <strong style="color:var(--color-primary); font-size:16px;">02. Anti-Pinch &amp; Presence Detection Sensors</strong>
-            <p style="margin:6px 0 0; font-size:14.5px;">Check that the model incorporates multiple redundant sensing layers—such as infrared entry curtains and base weight sensors—with an automatic motor cutoff if a cat enters during a cleaning cycle.</p>
+          <div class="htc-card pastel-2">
+            <div class="htc-num">02</div>
+            <h3 class="htc-title">Anti-Pinch &amp; Presence Sensors</h3>
+            <p class="htc-desc">Check that the model incorporates multiple redundant sensing layers—such as infrared entry curtains and base weight sensors—with an automatic motor cutoff if a cat enters during a cleaning cycle.</p>
           </div>
-          <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:16px; border-radius:8px;">
-            <strong style="color:var(--color-primary); font-size:16px;">03. Waste Drawer Seal &amp; Odor Control</strong>
-            <p style="margin:6px 0 0; font-size:14.5px;">A sealed waste drawer is designed to isolate waste between emptying intervals.</p>
+          <div class="htc-card pastel-3">
+            <div class="htc-num">03</div>
+            <h3 class="htc-title">Waste Drawer Seal &amp; Odor Control</h3>
+            <p class="htc-desc">A sealed waste drawer is designed to isolate waste between emptying intervals.</p>
           </div>
-          <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:16px; border-radius:8px;">
-            <strong style="color:var(--color-primary); font-size:16px;">04. Litter Compatibility &amp; Consumables</strong>
-            <p style="margin:6px 0 0; font-size:14.5px;">Most rotating drums require standard clumping clay litter. Review manufacturer guidelines regarding waste bin liners and litter formula compatibility.</p>
+          <div class="htc-card pastel-4">
+            <div class="htc-num">04</div>
+            <h3 class="htc-title">Litter Compatibility &amp; Consumables</h3>
+            <p class="htc-desc">Most rotating drums require standard clumping clay litter. Review manufacturer guidelines regarding waste bin liners and litter formula compatibility.</p>
           </div>
         </div>
       </section>
 
       <!-- SECTION 4: MODEL PROFILES -->
-      <section class="content-section">
+      <section class="content-section" id="reviews">
         <h2>4. Highlighted Models &amp; Architectural Deep Dives</h2>
         <p style="font-size: 14.5px; color: var(--color-slate); margin-bottom: 24px;">
           Below are technical profiles for the three compared models, summarizing published specifications from manufacturer product pages.
@@ -778,51 +792,45 @@
         </div>
       </section>
 
-      <!-- RELATED GUIDES PREVIEW -->
-      <section style="margin: 36px 0;">
-        <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 6px; color: var(--color-dark);">Companion Buying Blueprints</h2>
-        <p style="font-size: 14px; color: var(--color-slate); margin-bottom: 20px;">
-          Explore specialized guides tailored to specific household configurations and pet behaviors:
-        </p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-          <div style="background:#fff; border:1px solid var(--color-border); border-radius:10px; padding:20px; display:flex; flex-direction:column; justify-content:space-between;">
-            <div>
-              <span style="font-size:11px; font-weight:800; text-transform:uppercase; color:var(--color-primary); letter-spacing:0.06em;">MULTI-CAT BLUEPRINT</span>
-              <h3 style="font-size:17px; font-weight:700; margin:6px 0 10px; color:var(--color-dark);">Multi-Cat Households</h3>
-              <p style="font-size:13.5px; color:var(--color-slate); line-height:1.5; margin:0 0 16px;">
-                Specification comparisons covering waste bin capacity, entry dimensions, and sensor architecture for multi-cat households.
-              </p>
-            </div>
-            <a href="best-self-cleaning-litter-box-for-multiple-cats.html" style="color:var(--color-primary); font-weight:700; font-size:13.5px; text-decoration:none;">Read Full Guide &rarr;</a>
+      <!-- KEEP READING COMPONENT -->
+      <section class="keep-reading-wrap" id="keep-reading">
+        <div class="keep-reading-header">
+          <div>
+            <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary);">COMPANION BLUEPRINTS</div>
+            <h2 style="font-size: 22px; font-weight: 800; margin: 4px 0 0; color: var(--color-dark);">Keep Reading: Specialized Guides</h2>
           </div>
+          <span style="font-size: 13px; color: var(--color-muted);">In-depth feline scenarios</span>
+        </div>
 
-          <div style="background:#fff; border:1px solid var(--color-border); border-radius:10px; padding:20px; display:flex; flex-direction:column; justify-content:space-between;">
-            <div>
-              <span style="font-size:11px; font-weight:800; text-transform:uppercase; color:var(--color-primary); letter-spacing:0.06em;">LARGE BREED BLUEPRINT</span>
-              <h3 style="font-size:17px; font-weight:700; margin:6px 0 10px; color:var(--color-dark);">Larger Cats</h3>
-              <p style="font-size:13.5px; color:var(--color-slate); line-height:1.5; margin:0 0 16px;">
-                Dimension comparison for cats over 15 lbs, contrasting open-top sifting basins and wide-opening rotating globes.
-              </p>
+        <div class="keep-reading-grid">
+          <a href="best-self-cleaning-litter-box-for-multiple-cats.html" class="keep-reading-card">
+            <img src="../assets/img/cat-multi.jpg" alt="Multiple cats resting together" class="keep-reading-thumb" loading="lazy">
+            <div class="keep-reading-body">
+              <span class="keep-reading-chip">MULTI-CAT BLUEPRINT</span>
+              <h3 class="keep-reading-title">Best Self-Cleaning Litter Box for Multiple Cats (2026)</h3>
             </div>
-            <a href="best-litter-box-for-large-cats.html" style="color:var(--color-primary); font-weight:700; font-size:13.5px; text-decoration:none;">Read Full Guide &rarr;</a>
-          </div>
+          </a>
 
-          <div style="background:#fff; border:1px solid var(--color-border); border-radius:10px; padding:20px; display:flex; flex-direction:column; justify-content:space-between;">
-            <div>
-              <span style="font-size:11px; font-weight:800; text-transform:uppercase; color:var(--color-primary); letter-spacing:0.06em;">ALTERNATIVES BLUEPRINT</span>
-              <h3 style="font-size:17px; font-weight:700; margin:6px 0 10px; color:var(--color-dark);">Litter-Robot Alternatives</h3>
-              <p style="font-size:13.5px; color:var(--color-slate); line-height:1.5; margin:0 0 16px;">
-                Alternative form factors, open-top basins, and cylinder designs compared side-by-side with the benchmark.
-              </p>
+          <a href="best-litter-box-for-large-cats.html" class="keep-reading-card">
+            <img src="../assets/img/cat-large-relax.jpg" alt="Large domestic cat relaxing comfortably" class="keep-reading-thumb" loading="lazy">
+            <div class="keep-reading-body">
+              <span class="keep-reading-chip">LARGE BREED BLUEPRINT</span>
+              <h3 class="keep-reading-title">Best Automatic Litter Box for Large Cats (2026)</h3>
             </div>
-            <a href="litter-robot-alternatives.html" style="color:var(--color-primary); font-weight:700; font-size:13.5px; text-decoration:none;">Read Full Guide &rarr;</a>
-          </div>
+          </a>
+
+          <a href="litter-robot-alternatives.html" class="keep-reading-card">
+            <img src="../assets/img/cat-clean-home.jpg" alt="Clean modern living room cat environment" class="keep-reading-thumb" loading="lazy">
+            <div class="keep-reading-body">
+              <span class="keep-reading-chip">ALTERNATIVES BLUEPRINT</span>
+              <h3 class="keep-reading-title">Top Litter-Robot Alternatives: 4 Models Tested &amp; Ranked</h3>
+            </div>
+          </a>
         </div>
       </section>
 
       <!-- FAQ SECTION -->
-      <section class="faq-wrap">
+      <section class="faq-wrap" id="faq">
         <h2>Common Questions &amp; Answers</h2>
         <details class="faq-item">
           <summary>Are automatic litter boxes safe for kittens?</summary>
@@ -838,6 +846,9 @@
         </details>
       </section>
 
+        </div><!-- /.guide-main-col -->
+      </div><!-- /.guide-layout -->
+
     </div>
   </article>
 
@@ -852,7 +863,6 @@
           </p>
           <div style="display: flex; gap: 10px;">
             <span style="background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; font-size: 11px;">We Do Not Test Products Ourselves</span>
-            <span style="background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; font-size: 11px;">SSL Secure Browsing</span>
           </div>
         </div>
 

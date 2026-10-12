@@ -29,12 +29,12 @@ Editorial background imagery licensed under the Unsplash License (free for comme
   - Photographer: Erik-Jan Leusink
   - Source: Unsplash (https://unsplash.com/@ejleusink)
 - `assets/img/kitten-curious.jpg`
-  - Photographer: Manja Vitolic
-  - Source: Unsplash (https://unsplash.com/photos/gKXKBY-C-Dk)
+  - Photographer: Jae Park
+  - Source: Unsplash (https://unsplash.com/photos/brown-tabby-cat-1cf6624b9987)
 - `assets/img/cat-hero.jpg`
   - Photographer: Ricardo L
   - Source: Unsplash (https://unsplash.com/@ricardol)
 - `assets/img/cat-multi.jpg`
-  - Photographer: Cédric VT
-  - Source: Unsplash (https://unsplash.com/photos/IuJmJYqh2Ds)
+  - Photographer: Nathalie Jolie
+  - Source: Unsplash (https://unsplash.com/photos/two-brown-tabby-cats-on-wood-planks-fb74d128c3dc)
 
