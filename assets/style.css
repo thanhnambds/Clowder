@@ -1404,7 +1404,8 @@ a {
   border: 2px solid #ffffff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.editorial-info h4 {
+.editorial-info h4,
+.editorial-info h3 {
   margin: 0 0 4px;
   font-size: 16px;
   color: var(--color-dark);
