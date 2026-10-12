@@ -8,7 +8,7 @@ Official hardware press & product catalog imagery sourced directly from official
   - Source: Official Whisker Litter-Robot 5 Catalog (https://www.litter-robot.com/litter-robot-5.html)
 - `assets/img/neakasa-m1.jpg`, `assets/img/neakasa-m1-basin.jpg`, `assets/img/neakasa-m1-sensors.jpg`, `assets/img/neakasa-m1-lifestyle.jpg`
   - Brand: Neakasa
-  - Source: Official Neakasa M1 Product Portal (https://neakasa.com/products/neakasa-m1-automatic-litter-box)
+  - Source: Official Neakasa M1 Plus Product Portal (https://neakasa.com/products/neakasa-m1-automatic-litter-box)
 - `assets/img/petkit-purobot-max-pro-2.png`
   - Brand: PETKIT
   - Source: Official PETKIT Purobot Max Pro 2 Portal (https://www.petkit.com/products/purobot-max-pro-2-automatic-cat-litter-box-with-ai-camera)

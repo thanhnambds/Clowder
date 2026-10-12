@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/best-automatic-litter-box", "destination": "/guides/best-automatic-litter-box.html" },
+    { "source": "/best-self-cleaning-litter-box-for-multiple-cats", "destination": "/guides/best-self-cleaning-litter-box-for-multiple-cats.html" }
+  ]
+}
