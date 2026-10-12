@@ -1630,3 +1630,13 @@ a {
     height: 44px;
   }
 }
+
+/* Disabled CTA button state */
+.btn.disabled,
+.btn-cta.disabled,
+.btn-leaderboard-cta.disabled,
+.guide-read-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
