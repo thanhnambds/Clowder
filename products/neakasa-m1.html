@@ -71,7 +71,7 @@
         <!-- PRODUCT GALLERY -->
         <div class="prod-gallery-wrap">
           <div class="prod-main-img">
-            <img id="main-product-img" src="/assets/img/neakasa-m1.jpg" alt="Neakasa M1 Plus open-top automatic cat litter box basin" loading="eager" style="object-fit: cover;">
+            <img id="main-product-img" src="/assets/img/neakasa-m1.jpg" alt="Neakasa M1 Plus open-top automatic cat litter box basin" loading="eager" style="object-fit: contain; background: #f8fafc; padding: 12px;">
           </div>
           <div class="prod-thumb-strip">
             <div class="prod-thumb-item active" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
@@ -85,6 +85,12 @@
             </div>
             <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1-lifestyle.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
               <img src="/assets/img/neakasa-m1-lifestyle.jpg" alt="Neakasa M1 Plus home setting">
+            </div>
+            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1-plus-feature-1.webp'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+              <img src="/assets/img/neakasa-m1-plus-feature-1.webp" alt="Neakasa M1 Plus waste bin and pull-and-wrap system">
+            </div>
+            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1-plus-feature-2.webp'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+              <img src="/assets/img/neakasa-m1-plus-feature-2.webp" alt="Neakasa M1 Plus app monitoring and multi-cat tracking">
             </div>
           </div>
         </div>
