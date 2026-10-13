@@ -175,22 +175,14 @@ body.page .short-answer-desc{font-size:14px;color:var(--pg-muted);line-height:1.
 body.page .short-answer-link{font-size:14px;font-weight:700;color:var(--pg-teal);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
 body.page .short-answer-link:hover{text-decoration:underline}
 
-/* Guide Layout & Sticky TOC + Mobile Chips */
-body.page .guide-layout{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start;margin-top:32px}
-body.page .guide-toc-sidebar{position:sticky;top:96px;background:#fff;border:1.5px solid var(--pg-line);border-radius:20px;padding:20px;max-height:calc(100vh - 120px);overflow-y:auto}
-body.page .guide-toc-title{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--pg-muted);margin-bottom:12px}
-body.page .guide-toc-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
-body.page .guide-toc-list a{font-size:13.5px;color:var(--pg-muted);text-decoration:none;padding:6px 10px;border-radius:10px;transition:all 0.15s ease;display:block;line-height:1.35}
-body.page .guide-toc-list a:hover,body.page .guide-toc-list a.active{background:var(--pg-mint);color:var(--pg-teal);font-weight:600}
-body.page .guide-toc-chips{display:none}
-
+/* Guide Layout: Single Full-Width Balanced Column (TOC Removed) */
+body.page .guide-toc-sidebar,
+body.page .guide-toc-chips{display:none!important}
+body.page .guide-layout,
+body.page .guide-main-col{display:block!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0!important}
+body.page .guide-main-col > .content-section:first-child{margin-top:48px}
 @media (max-width:768px){
-  body.page .guide-layout{display:block}
-  body.page .guide-toc-sidebar{display:none}
-  body.page .guide-toc-chips{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;padding:8px 0 16px;margin-bottom:16px;scrollbar-width:none}
-  body.page .guide-toc-chips::-webkit-scrollbar{display:none}
-  body.page .guide-toc-chip{white-space:nowrap;font-size:13px;font-weight:600;color:var(--pg-muted);background:#fff;border:1px solid var(--pg-line);padding:7px 14px;border-radius:999px;text-decoration:none;flex-shrink:0}
-  body.page .guide-toc-chip:hover,body.page .guide-toc-chip.active{background:var(--pg-mint);color:var(--pg-teal);border-color:var(--pg-teal)}
+  body.page .guide-main-col > .content-section:first-child{margin-top:36px}
 }
 
 /* How to Choose: 4 Pastel Numbered Cards */
@@ -347,10 +339,10 @@ body.page .prod-vs-card{background:#fff;border:1.5px solid var(--pg-line);border
 
 /* ==========================================================================
    Text Pages (About, Methodology, Privacy Policy, Affiliate Disclosure)
-   Centered 760px Column within 1200px Grid
+   Aligned with 1200px Grid
    ========================================================================== */
 body.page.text-page .article-container{
-  max-width:760px!important;
+  max-width:var(--container-max-width)!important;
   margin-left:auto!important;
   margin-right:auto!important;
 }
@@ -368,7 +360,7 @@ body.page.text-page div[style*="#fef2f2"]{
   padding:24px!important;
   color:var(--pg-cream)!important;
   font-size:16px!important;
-  max-width:760px;
+  width:100%;
   box-sizing:border-box;
   margin:24px 0;
 }
