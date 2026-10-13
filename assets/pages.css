@@ -232,6 +232,41 @@ body.page .prod-stat-cell{background:var(--pg-mint);border-radius:16px;padding:1
 body.page .prod-stat-value{font-family:'Bricolage Grotesque',sans-serif;font-size:19px;font-weight:800;line-height:1.15;color:var(--pg-ink)}
 body.page .prod-stat-label{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;color:var(--pg-muted);margin-top:4px}
 
+body.page .prod-price-box{
+  background:var(--pg-cream);
+  border:1.5px solid var(--pg-line);
+  border-radius:20px;
+  padding:20px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+body.page .prod-price-box .btn-cta{
+  flex-shrink:0;
+}
+@media (max-width:640px){
+  body.page .prod-price-box{
+    flex-direction:column;
+    align-items:stretch;
+    padding:18px;
+    gap:14px;
+  }
+  body.page .prod-price-box .btn-cta{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+    padding:14px 20px!important;
+    font-size:15px!important;
+    box-sizing:border-box;
+  }
+  body.page .prod-price-box + div{
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    gap:6px!important;
+  }
+}
+
 /* Feature Showcase Rows (1:1 grid, 40px gap, 4:3 cover images, equal height) */
 body.page .feature-showcase-section{margin:80px 0;padding:0}
 @media (max-width:768px){
