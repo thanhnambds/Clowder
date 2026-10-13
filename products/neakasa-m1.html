@@ -72,24 +72,37 @@
         <div class="prod-gallery-wrap">
           <div class="prod-main-img">
             <img id="main-product-img" src="/assets/img/neakasa-m1.jpg" alt="Neakasa M1 Plus open-top automatic cat litter box basin" loading="eager" style="object-fit: contain; background: #f8fafc; padding: 12px;">
+            <video id="main-product-video" controls playsinline muted loop preload="metadata" poster="/assets/img/neakasa-m1-lifestyle.jpg" style="display: none;">
+              <source src="https://cdn.shopify.com/videos/c/o/v/f3bc57da19154f47aba29c1863295799.mp4" type="video/mp4">
+            </video>
+            <button type="button" class="prod-gallery-btn prev" aria-label="Previous image or video" onclick="stepProductMedia(this, -1)">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="prod-gallery-btn next" aria-label="Next image or video" onclick="stepProductMedia(this, 1)">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
           </div>
           <div class="prod-thumb-strip">
-            <div class="prod-thumb-item active" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item active" data-type="image" data-src="/assets/img/neakasa-m1.jpg" onclick="selectProductMedia(this)">
               <img src="/assets/img/neakasa-m1.jpg" alt="Neakasa M1 Plus main basin view">
             </div>
-            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1-basin.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item video-thumb" data-type="video" data-src="https://cdn.shopify.com/videos/c/o/v/f3bc57da19154f47aba29c1863295799.mp4" data-poster="/assets/img/neakasa-m1-lifestyle.jpg" onclick="selectProductMedia(this)">
+              <img src="/assets/img/neakasa-m1-lifestyle.jpg" alt="Neakasa M1 Plus open-top sifting video">
+              <span class="video-badge-label">Video</span>
+            </div>
+            <div class="prod-thumb-item" data-type="image" data-src="/assets/img/neakasa-m1-basin.jpg" onclick="selectProductMedia(this)">
               <img src="/assets/img/neakasa-m1-basin.jpg" alt="Neakasa M1 Plus interior dimensions">
             </div>
-            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1-sensors.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item" data-type="image" data-src="/assets/img/neakasa-m1-sensors.jpg" onclick="selectProductMedia(this)">
               <img src="/assets/img/neakasa-m1-sensors.jpg" alt="Neakasa M1 Plus safety sensors">
             </div>
-            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1-lifestyle.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item" data-type="image" data-src="/assets/img/neakasa-m1-lifestyle.jpg" onclick="selectProductMedia(this)">
               <img src="/assets/img/neakasa-m1-lifestyle.jpg" alt="Neakasa M1 Plus home setting">
             </div>
-            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1-plus-feature-1.webp'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item" data-type="image" data-src="/assets/img/neakasa-m1-plus-feature-1.webp" onclick="selectProductMedia(this)">
               <img src="/assets/img/neakasa-m1-plus-feature-1.webp" alt="Neakasa M1 Plus waste bin and pull-and-wrap system">
             </div>
-            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/neakasa-m1-plus-feature-2.webp'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item" data-type="image" data-src="/assets/img/neakasa-m1-plus-feature-2.webp" onclick="selectProductMedia(this)">
               <img src="/assets/img/neakasa-m1-plus-feature-2.webp" alt="Neakasa M1 Plus app monitoring and multi-cat tracking">
             </div>
           </div>
@@ -654,6 +667,53 @@
       updateBttProgress();
     }
 
+    function selectProductMedia(thumbEl) {
+      const wrap = thumbEl.closest('.prod-gallery-wrap');
+      if (!wrap) return;
+      const imgEl = wrap.querySelector('#main-product-img');
+      const vidEl = wrap.querySelector('#main-product-video');
+      const type = thumbEl.getAttribute('data-type') || 'image';
+      const src = thumbEl.getAttribute('data-src');
+
+      wrap.querySelectorAll('.prod-thumb-item').forEach(el => el.classList.remove('active'));
+      thumbEl.classList.add('active');
+      thumbEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+
+      if (type === 'video' && vidEl) {
+        if (imgEl) imgEl.style.display = 'none';
+        vidEl.style.display = 'block';
+        const poster = thumbEl.getAttribute('data-poster');
+        if (poster) vidEl.setAttribute('poster', poster);
+        const sourceEl = vidEl.querySelector('source');
+        if (sourceEl && sourceEl.getAttribute('src') !== src) {
+          sourceEl.setAttribute('src', src);
+          vidEl.load();
+        } else if (vidEl.getAttribute('src') && vidEl.getAttribute('src') !== src) {
+          vidEl.setAttribute('src', src);
+          vidEl.load();
+        }
+        vidEl.play().catch(() => {});
+      } else {
+        if (vidEl) {
+          vidEl.pause();
+          vidEl.style.display = 'none';
+        }
+        if (imgEl && src) {
+          imgEl.src = src;
+          imgEl.style.display = 'block';
+        }
+      }
+    }
+
+    function stepProductMedia(btnEl, delta) {
+      const wrap = btnEl.closest('.prod-gallery-wrap');
+      if (!wrap) return;
+      const thumbs = Array.from(wrap.querySelectorAll('.prod-thumb-item'));
+      if (!thumbs.length) return;
+      const currentIdx = thumbs.findIndex(el => el.classList.contains('active'));
+      const nextIdx = (currentIdx + delta + thumbs.length) % thumbs.length;
+      selectProductMedia(thumbs[nextIdx]);
+    }
   </script>
 </body>
 </html>

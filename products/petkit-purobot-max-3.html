@@ -72,21 +72,34 @@
         <div class="prod-gallery-wrap">
           <div class="prod-main-img">
             <img id="main-product-img" src="/assets/img/petkit-purobot-max-3.png" alt="PETKIT Purobot Max 3 automatic cat litter box" loading="eager" style="object-fit: contain; background: #f8fafc; padding: 20px;">
+            <video id="main-product-video" controls playsinline muted loop preload="metadata" poster="/assets/img/petkit-max-3-entry.jpg" style="display: none;">
+              <source src="https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/fd4250f6-672a-4491-9a61-2933c3b61d79/default.jobtemplate.mp4.480.mp4" type="video/mp4">
+            </video>
+            <button type="button" class="prod-gallery-btn prev" aria-label="Previous image or video" onclick="stepProductMedia(this, -1)">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="prod-gallery-btn next" aria-label="Next image or video" onclick="stepProductMedia(this, 1)">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
           </div>
           <div class="prod-thumb-strip">
-            <div class="prod-thumb-item active" onclick="document.getElementById('main-product-img').src='/assets/img/petkit-purobot-max-3.png'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item active" data-type="image" data-src="/assets/img/petkit-purobot-max-3.png" onclick="selectProductMedia(this)">
               <img src="/assets/img/petkit-purobot-max-3.png" alt="PETKIT Purobot Max 3 front view">
             </div>
-            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/petkit-max-3-entry.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item video-thumb" data-type="video" data-src="https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/fd4250f6-672a-4491-9a61-2933c3b61d79/default.jobtemplate.mp4.480.mp4" data-poster="/assets/img/petkit-max-3-entry.jpg" onclick="selectProductMedia(this)">
+              <img src="/assets/img/petkit-max-3-entry.jpg" alt="PETKIT Purobot Max 3 overview video">
+              <span class="video-badge-label">Video</span>
+            </div>
+            <div class="prod-thumb-item" data-type="image" data-src="/assets/img/petkit-max-3-entry.jpg" onclick="selectProductMedia(this)">
               <img src="/assets/img/petkit-max-3-entry.jpg" alt="PETKIT Purobot Max 3 wide low entrance">
             </div>
-            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/petkit-max-3-bin.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item" data-type="image" data-src="/assets/img/petkit-max-3-bin.jpg" onclick="selectProductMedia(this)">
               <img src="/assets/img/petkit-max-3-bin.jpg" alt="PETKIT Purobot Max 3 7L waste bin capacity">
             </div>
-            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/petkit-max-3-safety.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item" data-type="image" data-src="/assets/img/petkit-max-3-safety.jpg" onclick="selectProductMedia(this)">
               <img src="/assets/img/petkit-max-3-safety.jpg" alt="PETKIT Purobot Max 3 12-sensor anti-pinch safety">
             </div>
-            <div class="prod-thumb-item" onclick="document.getElementById('main-product-img').src='/assets/img/petkit-max-3-odor.jpg'; this.parentElement.querySelectorAll('.prod-thumb-item').forEach(el=>el.classList.remove('active')); this.classList.add('active');">
+            <div class="prod-thumb-item" data-type="image" data-src="/assets/img/petkit-max-3-odor.jpg" onclick="selectProductMedia(this)">
               <img src="/assets/img/petkit-max-3-odor.jpg" alt="PETKIT Purobot Max 3 OdorVoid odor control system">
             </div>
           </div>
@@ -607,6 +620,53 @@
       updateBttProgress();
     }
 
+    function selectProductMedia(thumbEl) {
+      const wrap = thumbEl.closest('.prod-gallery-wrap');
+      if (!wrap) return;
+      const imgEl = wrap.querySelector('#main-product-img');
+      const vidEl = wrap.querySelector('#main-product-video');
+      const type = thumbEl.getAttribute('data-type') || 'image';
+      const src = thumbEl.getAttribute('data-src');
+
+      wrap.querySelectorAll('.prod-thumb-item').forEach(el => el.classList.remove('active'));
+      thumbEl.classList.add('active');
+      thumbEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+
+      if (type === 'video' && vidEl) {
+        if (imgEl) imgEl.style.display = 'none';
+        vidEl.style.display = 'block';
+        const poster = thumbEl.getAttribute('data-poster');
+        if (poster) vidEl.setAttribute('poster', poster);
+        const sourceEl = vidEl.querySelector('source');
+        if (sourceEl && sourceEl.getAttribute('src') !== src) {
+          sourceEl.setAttribute('src', src);
+          vidEl.load();
+        } else if (vidEl.getAttribute('src') && vidEl.getAttribute('src') !== src) {
+          vidEl.setAttribute('src', src);
+          vidEl.load();
+        }
+        vidEl.play().catch(() => {});
+      } else {
+        if (vidEl) {
+          vidEl.pause();
+          vidEl.style.display = 'none';
+        }
+        if (imgEl && src) {
+          imgEl.src = src;
+          imgEl.style.display = 'block';
+        }
+      }
+    }
+
+    function stepProductMedia(btnEl, delta) {
+      const wrap = btnEl.closest('.prod-gallery-wrap');
+      if (!wrap) return;
+      const thumbs = Array.from(wrap.querySelectorAll('.prod-thumb-item'));
+      if (!thumbs.length) return;
+      const currentIdx = thumbs.findIndex(el => el.classList.contains('active'));
+      const nextIdx = (currentIdx + delta + thumbs.length) % thumbs.length;
+      selectProductMedia(thumbs[nextIdx]);
+    }
   </script>
 </body>
 </html>
