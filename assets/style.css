@@ -1045,6 +1045,13 @@ a {
   align-items: stretch;
   margin-bottom: 24px;
 }
+.review-card-content,
+.review-card-grid > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
 @media (max-width: 800px) {
   .review-card-grid {
     grid-template-columns: 1fr;
@@ -1074,7 +1081,7 @@ a {
 }
 .spec-snapshot-table {
   width: 100%;
-  height: 100%;
+  height: auto;
   border-collapse: collapse;
   font-size: 13.5px;
 }

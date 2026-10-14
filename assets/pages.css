@@ -93,6 +93,9 @@ body.page .top-pick-card,body.page .review-card,body.page .spotlight-box,body.pa
 body.page .top-pick-badge{background:var(--pg-ink);color:var(--pg-cream);font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;border-radius:999px}
 body.page .featured-pick .top-pick-badge{background:var(--pg-amber);color:var(--pg-ink)}
 body.page .top-pick-media,body.page .review-card-media,body.page .prod-main-img{border-radius:20px;background:var(--pg-sand);overflow:hidden}
+body.page .spec-snapshot-table{height:auto}
+body.page .review-card-content,body.page .review-card-grid > div:last-child{display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+body.page .review-card-grid .btn-leaderboard-cta{padding:12px 20px;font-size:14px}
 body.page .top-pick-bullets li::before{color:var(--pg-teal)}
 
 body.page .table-responsive,body.page .leaderboard-wrap{border:1.5px solid var(--pg-line);border-radius:24px;background:#fff;box-shadow:none;overflow-x:auto}
