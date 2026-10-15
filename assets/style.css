@@ -1687,7 +1687,8 @@ a {
     left: 0;
     background: #ffffff;
     z-index: 2;
-    box-shadow: 3px 0 6px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
   }
   .comp-table th:first-child {
     background: #f1f5f9;

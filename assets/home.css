@@ -88,9 +88,11 @@ body.home .site-header{background:var(--hp-cream);box-shadow:none;border-bottom:
 .hp-compare{background:#fff;padding:80px 0}
 .hp-compare-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:36px}
 .hp-compare-head .hp-h2{margin:0}
-.hp-compare .table-responsive{border:1.5px solid #E2E8E4;border-radius:28px;overflow-x:auto;background:#fff}
+.hp-compare .table-responsive{border:1.5px solid #E2E8E4;border-radius:28px;overflow-x:auto;background:#fff;-webkit-overflow-scrolling:touch}
+.hp-compare .comp-table{width:100%}
 .hp-compare .comp-table thead th{vertical-align:bottom;padding:20px}
-.hp-compare .comp-table thead th:first-child{vertical-align:middle}
+.hp-compare .comp-table thead th:first-child{vertical-align:middle;width:20%}
+.hp-compare .comp-table thead th:not(:first-child){width:26.66%}
 .hp-compare .comp-table thead img{display:block;height:84px;width:auto;max-width:100%;object-fit:contain;margin:0 0 10px}
 .hp-th-name{display:block;font-weight:700;font-size:20px;line-height:1.15}
 .hp-th-sub{display:block;margin-top:4px;font:500 11px 'IBM Plex Mono',monospace;color:var(--hp-muted);text-transform:uppercase}
@@ -154,11 +156,23 @@ body.home .back-to-top-btn{background:var(--hp-ink)}
   .hp-start-thumb{height:110px}
   .hp-start-title{font-size:22px}
   .hp-models-grid{grid-template-columns:1fr 1fr}
-  .hp-num{font-size:18px}
-  .hp-compare .comp-table{min-width:820px}
-  .hp-compare .comp-table thead img{height:64px}
+  .hp-compare .comp-table{border-collapse:separate!important;border-spacing:0!important;min-width:720px!important;width:auto!important}
+  .hp-compare .comp-table thead img{height:54px}
   .hp-compare .comp-table th:first-child,
-  .hp-compare .comp-table td:first-child{width:125px!important;min-width:125px!important;max-width:125px!important;padding:12px 10px!important}
+  .hp-compare .comp-table td:first-child{
+    width:105px!important;min-width:105px!important;max-width:105px!important;
+    box-sizing:border-box!important;padding:10px 8px!important;
+    font-size:12.5px!important;font-weight:600!important;
+    position:sticky!important;left:0!important;z-index:4!important;
+    background:#ffffff!important;box-shadow:2px 0 6px rgba(0,0,0,0.06)!important;
+    word-break:break-word!important;
+  }
+  .hp-compare .comp-table thead th:first-child{background:#f8fafc!important;z-index:6!important}
+  .hp-compare .comp-table th:first-child .hp-th-name{font-size:12.5px!important;line-height:1.2!important}
+  .hp-compare .comp-table th:not(:first-child),
+  .hp-compare .comp-table td:not(:first-child){min-width:205px!important;padding:10px 12px!important;font-size:13.5px!important}
+  .hp-compare .comp-table thead th:not(:first-child) .hp-th-name{font-size:16px!important}
+  .hp-compare .table-responsive{border-radius:16px!important}
   .hp-method-grid{grid-template-columns:1fr;gap:0}
   .hp-method-copy{padding:48px 0 24px}
   .hp-method-copy h2{font-size:28px}
