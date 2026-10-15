@@ -312,9 +312,15 @@ body.page .feature-copy{display:flex;flex-direction:column;justify-content:cente
 body.page .feature-media{aspect-ratio:4/3.6;min-height:340px;height:100%;border-radius:24px;background:#fff;border:1.5px solid var(--pg-line);overflow:hidden;box-shadow:none;display:flex;align-items:center;justify-content:center}
 body.page .feature-media img{width:100%;height:100%;object-fit:cover!important;background:transparent!important}
 
-/* Comparison Tables: Fixed 220px First Column */
+/* Comparison Tables: Fixed 220px First Column on Desktop, Compact 120px on Mobile */
 body.page .comp-table th:first-child,
-body.page .comp-table td:first-child{width:220px!important;min-width:220px!important;max-width:220px!important}
+body.page .comp-table td:first-child{width:220px;min-width:220px;max-width:220px}
+@media (max-width:768px){
+  body.page .comp-table th:first-child,
+  body.page .comp-table td:first-child{width:120px!important;min-width:120px!important;max-width:120px!important;padding:12px 10px!important}
+  body.page .comp-table th,
+  body.page .comp-table td{padding:12px 12px}
+}
 
 /* Trust Bar: 4 Equal Columns, Vertically Centered */
 body.page .trust-bar{background:var(--pg-mint);border:0;padding:28px 0;margin:56px 0}

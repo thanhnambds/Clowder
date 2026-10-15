@@ -90,6 +90,7 @@ body.home .site-header{background:var(--hp-cream);box-shadow:none;border-bottom:
 .hp-compare-head .hp-h2{margin:0}
 .hp-compare .table-responsive{border:1.5px solid #E2E8E4;border-radius:28px;overflow-x:auto;background:#fff}
 .hp-compare .comp-table thead th{vertical-align:bottom;padding:20px}
+.hp-compare .comp-table thead th:first-child{vertical-align:middle}
 .hp-compare .comp-table thead img{display:block;height:84px;width:auto;max-width:100%;object-fit:contain;margin:0 0 10px}
 .hp-th-name{display:block;font-weight:700;font-size:20px;line-height:1.15}
 .hp-th-sub{display:block;margin-top:4px;font:500 11px 'IBM Plex Mono',monospace;color:var(--hp-muted);text-transform:uppercase}
@@ -118,7 +119,7 @@ body.home .site-header{background:var(--hp-cream);box-shadow:none;border-bottom:
 .hp-method-copy{padding:80px 0;display:flex;flex-direction:column;gap:20px}
 .hp-method-copy h2{font-size:36px;line-height:1.1;font-weight:800;margin:0 0 16px;text-align:left}
 .hp-method-copy p{margin:0;font-size:19px;color:#C9D6CF;max-width:30em}
-.hp-facts{display:flex;gap:28px;flex-wrap:wrap;margin:4px 0 8px}
+.hp-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:480px;margin:4px 0 8px}
 .hp-fact{display:flex;flex-direction:column;gap:2px}
 .hp-fact b{font-size:36px;font-weight:800;color:var(--hp-amber);line-height:1}
 .hp-fact span{font-size:14px;color:#C9D6CF}
@@ -156,8 +157,13 @@ body.home .back-to-top-btn{background:var(--hp-ink)}
   .hp-num{font-size:18px}
   .hp-compare .comp-table{min-width:820px}
   .hp-compare .comp-table thead img{height:64px}
+  .hp-compare .comp-table th:first-child,
+  .hp-compare .comp-table td:first-child{width:125px!important;min-width:125px!important;max-width:125px!important;padding:12px 10px!important}
   .hp-method-grid{grid-template-columns:1fr;gap:0}
   .hp-method-copy{padding:48px 0 24px}
   .hp-method-copy h2{font-size:28px}
+  .hp-facts{grid-template-columns:repeat(3,1fr);gap:12px;max-width:100%}
+  .hp-fact b{font-size:26px}
+  .hp-fact span{font-size:12px;line-height:1.3}
   .hp-arch{height:260px;border-radius:140px 140px 0 0;object-position:50% 22%}
 }
