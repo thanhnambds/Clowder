@@ -23,6 +23,7 @@
   <meta name="twitter:title" content="Affiliate & FTC Disclosure – ClowderHub">
   <meta name="twitter:description" content="ClowderHub's commercial disclosure: how our Amazon Associate and partner links work, how we compile specs, and our editorial standards.">
   <meta name="twitter:image" content="https://www.clowderhub.com/assets/img/cat-clean-home.jpg">
+  <script src="/assets/nav.js" defer></script>
 </head>
 <body class="page text-page">
 
@@ -37,14 +38,41 @@
           <span></span>
         </span>
       </button>
-      <nav>
+      <nav aria-label="Main navigation">
         <ul class="nav-menu" id="nav-menu">
           <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/guides/best-automatic-litter-box" class="nav-link">Best overall</a></li>
-          <li><a href="/guides/best-self-cleaning-litter-box-for-multiple-cats" class="nav-link">Multi-cat</a></li>
-          <li><a href="/guides/best-litter-box-for-large-cats" class="nav-link">Large cats</a></li>
-          <li><a href="/guides/litter-robot-alternatives" class="nav-link">Alternatives</a></li>
-          <li><a href="/guides/best-automatic-litter-box" class="nav-cta">Compare 5 Models &rarr;</a></li>
+          <li class="nav-item-dropdown">
+            <button type="button" class="nav-link nav-dropdown-toggle" id="guides-menu-btn" aria-expanded="false" aria-controls="guides-dropdown" aria-haspopup="true">
+              Guides
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" id="guides-dropdown" aria-labelledby="guides-menu-btn">
+              <li><a href="/guides/best-automatic-litter-box" class="dropdown-link">Overview</a></li>
+              <li><a href="/guides/best-self-cleaning-litter-box-for-multiple-cats" class="dropdown-link">Multiple cats</a></li>
+              <li><a href="/guides/best-litter-box-for-large-cats" class="dropdown-link">Large cats</a></li>
+              <li><a href="/guides/are-automatic-litter-boxes-worth-it" class="dropdown-link">Is it worth it?</a></li>
+              <li><a href="/guides/litter-robot-alternatives" class="dropdown-link">Litter-Robot alternatives</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-dropdown">
+            <button type="button" class="nav-link nav-dropdown-toggle" id="models-menu-btn" aria-expanded="false" aria-controls="models-dropdown" aria-haspopup="true">
+              Models
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" id="models-dropdown" aria-labelledby="models-menu-btn">
+              <li><a href="/guides/best-automatic-litter-box#showdown" class="dropdown-link">Compare all five</a></li>
+              <li><a href="/products/litter-robot-5" class="dropdown-link">Litter-Robot 5</a></li>
+              <li><a href="/products/neakasa-m1" class="dropdown-link">Neakasa M1 Plus</a></li>
+              <li><a href="/products/petkit-purobot-max-pro-2" class="dropdown-link">PETKIT Purobot Max Pro 2</a></li>
+              <li><a href="/products/petkit-purobot-max-3" class="dropdown-link">PETKIT Purobot Max 3</a></li>
+              <li><a href="/products/petkit-purobot-ultra" class="dropdown-link">PETKIT Purobot Ultra</a></li>
+            </ul>
+          </li>
+          <li><a href="/guides/best-automatic-litter-box" class="nav-cta">Compare 5 Models →</a></li>
         </ul>
       </nav>
     </div>
@@ -180,29 +208,7 @@
 
 
   <script>
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const navMenu = document.getElementById('nav-menu');
-    if (menuBtn && navMenu) {
-      menuBtn.addEventListener('click', () => {
-        const isOpen = navMenu.classList.toggle('open');
-        menuBtn.classList.toggle('active', isOpen);
-        menuBtn.setAttribute('aria-expanded', isOpen);
-      });
-      document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !menuBtn.contains(e.target) && navMenu.classList.contains('open')) {
-          navMenu.classList.remove('open');
-          menuBtn.classList.remove('active');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-      navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('open');
-          menuBtn.classList.remove('active');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
+    
   
     // Back to top floating button logic
     const bttBtn = document.getElementById('backToTopBtn');
