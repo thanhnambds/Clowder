@@ -206,9 +206,18 @@ a {
   border-radius: var(--radius-sm, 12px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   padding: 8px 0;
-  margin-top: 10px;
+  margin-top: 8px;
   list-style: none;
   z-index: 1000;
+}
+.nav-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: transparent;
 }
 @media (min-width: 769px) {
   .nav-item-dropdown:hover .nav-dropdown,

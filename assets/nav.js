@@ -23,6 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = drop.querySelector('.nav-dropdown-toggle');
     if (!btn) return;
 
+    let hoverTimer;
+
+    drop.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 768) {
+        clearTimeout(hoverTimer);
+        dropdowns.forEach(d => {
+          if (d !== drop) {
+            d.classList.remove('open');
+            d.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+        drop.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    drop.addEventListener('mouseleave', () => {
+      if (window.innerWidth > 768) {
+        hoverTimer = setTimeout(() => {
+          drop.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }, 150);
+      }
+    });
+
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const isOpen = drop.classList.contains('open');
