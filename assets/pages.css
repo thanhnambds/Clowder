@@ -94,7 +94,8 @@ body.page .content-section{margin:80px 0}
   body.page .content-section{margin:56px 0}
 }
 body.page .content-section p,body.page .content-section li{color:var(--pg-muted)}
-body.page .btn-cta,body.page .btn-leaderboard-cta,body.page .top-pick-cta-wrap a,body.page .guide-read-btn{border-radius:999px;font-weight:600}
+body.page .btn-cta,body.page .btn-leaderboard-cta,body.page .top-pick-cta-wrap a,body.page .guide-read-btn{border-radius:999px;font-weight:600;background:var(--color-primary);color:#fff}
+body.page .btn-cta:hover,body.page .btn-leaderboard-cta:hover,body.page .top-pick-cta-wrap a:hover,body.page .guide-read-btn:hover{background:var(--color-primary-hover,#09654F)!important;color:#fff!important;transform:translateY(-1px)}
 
 body.page .top-pick-card,body.page .review-card,body.page .spotlight-box,body.page .guide-card,body.page .niche-card,body.page .prod-info-panel,body.page .callout-verdict,body.page .short-answer-card,body.page .htc-card,body.page .good-for-box,body.page .watch-out-box,body.page .keep-reading-card,body.page .prod-vs-card,body.page .feature-card,body.page .editorial-bio-card,body.page .contact-box{
   background:#fff;border:1.5px solid var(--pg-line);border-radius:24px!important;padding:24px!important;box-shadow:none;box-sizing:border-box}

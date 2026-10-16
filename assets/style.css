@@ -1090,7 +1090,7 @@ a {
   transition: background 0.2s, transform 0.1s;
 }
 .btn-leaderboard-cta:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-primary-hover, #09654F);
   color: #ffffff;
 }
 .btn-leaderboard-cta.benchmark-btn {
