@@ -96,6 +96,7 @@ body.page .content-section{margin:80px 0}
 body.page .content-section p,body.page .content-section li{color:var(--pg-muted)}
 body.page .btn-cta,body.page .btn-leaderboard-cta,body.page .top-pick-cta-wrap a,body.page .guide-read-btn{border-radius:999px;font-weight:600;background:var(--color-primary);color:#fff}
 body.page .btn-cta:hover,body.page .btn-leaderboard-cta:hover,body.page .top-pick-cta-wrap a:hover,body.page .guide-read-btn:hover{background:var(--color-primary-hover,#09654F)!important;color:#fff!important;transform:translateY(-1px)}
+body.page .comp-table .guide-read-btn,body.page .comp-table .btn-leaderboard-cta,body.page .leaderboard-table .btn-leaderboard-cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:172px!important;max-width:100%!important;padding:9px 12px!important;font-size:13px!important;font-weight:600!important;line-height:1.2!important;text-align:center!important;white-space:nowrap!important;box-sizing:border-box!important;border-radius:999px!important;flex:none!important}
 
 body.page .top-pick-card,body.page .review-card,body.page .spotlight-box,body.page .guide-card,body.page .niche-card,body.page .prod-info-panel,body.page .callout-verdict,body.page .short-answer-card,body.page .htc-card,body.page .good-for-box,body.page .watch-out-box,body.page .keep-reading-card,body.page .prod-vs-card,body.page .feature-card,body.page .editorial-bio-card,body.page .contact-box{
   background:#fff;border:1.5px solid var(--pg-line);border-radius:24px!important;padding:24px!important;box-shadow:none;box-sizing:border-box}
@@ -104,7 +105,8 @@ body.page .featured-pick .top-pick-badge{background:var(--pg-amber);color:var(--
 body.page .top-pick-media,body.page .review-card-media,body.page .prod-main-img{border-radius:20px;background:var(--pg-sand);overflow:hidden}
 body.page .spec-snapshot-table{height:auto}
 body.page .review-card-content,body.page .review-card-grid > div:last-child{display:flex;flex-direction:column;justify-content:space-between;min-width:0}
-body.page .review-card-grid .btn-leaderboard-cta{padding:12px 20px;font-size:14px}
+body.page .review-card .btn-leaderboard-cta,body.page .spotlight-box .btn-cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:190px!important;padding:12px 20px!important;font-size:14px!important;font-weight:600!important;line-height:1.2!important;text-align:center!important;white-space:nowrap!important;box-sizing:border-box!important;border-radius:999px!important;flex:none!important}
+@media (max-width:640px){body.page .review-card .btn-leaderboard-cta,body.page .spotlight-box .btn-cta{width:100%!important;min-width:0!important}}
 body.page .top-pick-bullets li::before{color:var(--pg-teal)}
 
 body.page .table-responsive,body.page .leaderboard-wrap{border:1.5px solid var(--pg-line);border-radius:24px;background:#fff;box-shadow:none;overflow-x:auto}
@@ -281,6 +283,13 @@ body.page .prod-price-box{
 }
 body.page .prod-price-box .btn-cta{
   flex-shrink:0;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:200px!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+  box-sizing:border-box!important;
 }
 @media (max-width:640px){
   body.page .prod-price-box{
