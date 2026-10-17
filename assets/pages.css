@@ -523,3 +523,67 @@ body.page .page-404-hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px
   body.page .page-404-hero{grid-template-columns:1fr;text-align:center;padding:24px 0}
 }
 body.page .page-404-img{width:100%;max-width:440px;border-radius:28px;box-shadow:0 16px 36px rgba(20,32,28,0.08)}
+
+/* ==========================================================================
+   Mobile Tap Targets (min-height: 44px on max-width: 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* Footer links */
+  body.page .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+  }
+
+  /* Breadcrumb links */
+  body.page .breadcrumbs a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box;
+  }
+  body.page .breadcrumbs > div,
+  body.page .breadcrumbs .article-container,
+  body.page .breadcrumbs .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Byline links */
+  body.page .guide-byline-box a,
+  body.page .prod-byline-block a,
+  body.page .byline a,
+  body.page .article-byline a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    box-sizing: border-box;
+  }
+
+  /* "View specs" links and buttons */
+  body.page .short-answer-link,
+  body.page .comp-table th a[href*="/products/"],
+  body.page .comp-table td a[href*="/products/"],
+  body.page .leaderboard-table th a[href*="/products/"],
+  body.page .leaderboard-table td a[href*="/products/"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    box-sizing: border-box !important;
+  }
+}
+
