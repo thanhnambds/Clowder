@@ -95,4 +95,56 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // Mobile tables: swipe hint & right edge fade (D)
+  const tableWrappers = document.querySelectorAll('.table-responsive');
+  tableWrappers.forEach(wrapper => {
+    let hint = wrapper.previousElementSibling;
+    const isExistingHint = hint && (hint.classList.contains('swipe-hint') || hint.classList.contains('table-swipe-hint'));
+    if (!isExistingHint) {
+      hint = document.createElement('div');
+      hint.className = 'table-swipe-hint';
+      hint.innerHTML = '<span>Swipe to compare &rarr;</span>';
+      wrapper.parentNode.insertBefore(hint, wrapper);
+    } else {
+      hint.innerHTML = '<span>Swipe to compare &rarr;</span>';
+    }
+
+    let hasScrolled = false;
+
+    function updateTableHints() {
+      const isMobile = window.innerWidth <= 640;
+      const isOverflowing = wrapper.scrollWidth > wrapper.clientWidth + 2;
+      const canScrollRight = wrapper.scrollLeft < (wrapper.scrollWidth - wrapper.clientWidth - 4);
+
+      if (isMobile && isOverflowing && !hasScrolled) {
+        hint.style.display = 'inline-flex';
+      } else {
+        hint.style.display = 'none';
+      }
+
+      if (isOverflowing && canScrollRight) {
+        wrapper.classList.add('has-fade-right');
+      } else {
+        wrapper.classList.remove('has-fade-right');
+      }
+    }
+
+    wrapper.addEventListener('scroll', () => {
+      if (wrapper.scrollLeft > 10) {
+        hasScrolled = true;
+        hint.style.display = 'none';
+      }
+      const canScrollRight = wrapper.scrollLeft < (wrapper.scrollWidth - wrapper.clientWidth - 4);
+      if (canScrollRight) {
+        wrapper.classList.add('has-fade-right');
+      } else {
+        wrapper.classList.remove('has-fade-right');
+      }
+    }, { passive: true });
+
+    updateTableHints();
+    window.addEventListener('resize', updateTableHints);
+  });
 });
+

@@ -9,7 +9,7 @@ body.home{
   font-family:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
   font-size:17px;
   line-height:1.6;
-  overflow-x:hidden;
+  overflow-x:clip;
   max-width:100vw;
 }
 body.home .container{
@@ -137,16 +137,17 @@ body.home .site-footer a{color:inherit}
 body.home .site-footer span[style*="rgba(255,255,255,0.1)"]{background:rgba(242,169,59,.16)!important;color:var(--hp-cream)}
 body.home .back-to-top-btn{background:var(--hp-ink)}
 
-@media (max-width:900px){
-  .hp-hero{padding:16px 0 48px}
-  .hp-hero-grid{grid-template-columns:1fr;gap:40px}
-  .hp-hero-media{order:-1}
-  .hp-hero-media img{aspect-ratio:4/3}
+@media (max-width:1024px){
+  .hp-hero{padding:20px 0 48px}
+  .hp-hero-grid{grid-template-columns:1fr;gap:32px}
+  .hp-hero-copy{order:1}
+  .hp-hero-media{order:2;margin-top:8px}
+  .hp-hero-media img{max-height:280px;object-fit:cover;aspect-ratio:16/9;width:100%;border-radius:24px}
   .hp-chip-spec{left:12px;bottom:-18px;padding:10px 14px}
   .hp-chip-spec b{font-size:24px}
   .hp-chip-date{left:12px;right:auto;top:12px;font-size:13px;padding:6px 12px}
   .hp-lead{font-size:18px}
-  .hp-actions{flex-direction:column}
+  .hp-actions{flex-direction:row;gap:12px;flex-wrap:wrap}
   .hp-situations,.hp-start,.hp-compare,.hp-models{padding:56px 0}
   .hp-tiles{grid-template-columns:1fr 1fr;gap:12px}
   .hp-tile span{font-size:19px}
