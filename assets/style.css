@@ -1,4 +1,5 @@
-html, body { overflow-x: hidden; max-width: 100vw; }
+html { overflow-x: hidden; }
+body { overflow-x: clip; max-width: 100vw; }
 :root {
   --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --color-primary: #00b289;
@@ -1811,22 +1812,44 @@ a {
     padding: 12px;
     font-size: 14px;
   }
-  .swipe-hint {
+  .swipe-hint,
+  .table-swipe-hint {
     display: inline-flex;
   }
   .comp-table th:first-child,
-  .comp-table td:first-child {
+  .comp-table td:first-child,
+  .leaderboard-table th:first-child,
+  .leaderboard-table td:first-child {
     position: sticky;
     left: 0;
-    background: #ffffff;
+    background: #ffffff !important;
     z-index: 2;
-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.06);
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.08) !important;
     box-sizing: border-box;
   }
-  .comp-table th:first-child {
-    background: #f1f5f9;
+  .comp-table th:first-child,
+  .leaderboard-table th:first-child {
+    background: #f1f5f9 !important;
     z-index: 3;
   }
+}
+
+.table-swipe-hint {
+  display: none;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 8px 0 12px;
+  align-items: center;
+  width: fit-content;
+}
+.table-responsive.has-fade-right {
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 32px), transparent 100%);
+  mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 32px), transparent 100%);
 }
 
 
@@ -1919,3 +1942,101 @@ a {
   cursor: not-allowed;
   pointer-events: none;
 }
+
+/* ==========================================================================
+   Mobile Tap Targets (min-height: 44px on max-width: 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* Footer links */
+  .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+  }
+
+  /* Breadcrumb links - compact layout with expanded hit area (>=44px) */
+  .breadcrumbs {
+    padding: 10px 0 6px !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+  .breadcrumbs a {
+    position: relative !important;
+    display: inline-block !important;
+    min-height: auto !important;
+    padding: 2px 2px !important;
+    box-sizing: border-box !important;
+  }
+  .breadcrumbs a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 44px;
+    min-height: 44px;
+    width: 100%;
+    height: 44px;
+    pointer-events: auto;
+  }
+  .breadcrumbs > div,
+  .breadcrumbs .article-container,
+  .breadcrumbs .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 32px;
+  }
+
+  /* Byline links - compact layout with expanded hit area (>=44px), box ~110px tall at 390px */
+  .guide-byline-box,
+  .prod-byline-block {
+    margin: 10px 0 14px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+  .guide-byline-box a,
+  .prod-byline-block a,
+  .byline a,
+  .article-byline a {
+    position: relative !important;
+    display: inline !important;
+    min-height: auto !important;
+    padding: 0 1px !important;
+    box-sizing: border-box !important;
+  }
+  .guide-byline-box a::after,
+  .prod-byline-block a::after,
+  .byline a::after,
+  .article-byline a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 44px;
+    min-height: 44px;
+    width: 100%;
+    height: 44px;
+    pointer-events: auto;
+  }
+
+  /* "View specs" links and buttons */
+  .short-answer-link,
+  .hp-model-link,
+  .comp-table th a[href*="/products/"],
+  .comp-table td a[href*="/products/"],
+  .leaderboard-table th a[href*="/products/"],
+  .leaderboard-table td a[href*="/products/"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    box-sizing: border-box !important;
+  }
+}
+
