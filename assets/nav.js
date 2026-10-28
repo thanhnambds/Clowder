@@ -148,3 +148,85 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+
+// GA4 Affiliate Link Click Tracking (event delegation)
+(function() {
+  const urlProductMap = {
+    '4jdkN2t': 'Whisker Litter-Robot 5',
+    '4e4hPtA': 'Neakasa M1 Plus',
+    'neakasa': 'Neakasa M1 Plus',
+    '47UgK3X': 'PETKIT Purobot Max Pro 2',
+    '17052926': 'PETKIT Purobot Max Pro 2',
+    '3TSWrkg': 'PETKIT Purobot Max 3',
+    '17349725': 'PETKIT Purobot Max 3',
+    '47KD14i': 'PETKIT Purobot Ultra',
+    '17052922': 'PETKIT Purobot Ultra'
+  };
+
+  function getAffiliateProductName(link, href) {
+    for (const key in urlProductMap) {
+      if (href.includes(key)) return urlProductMap[key];
+    }
+    if (link.dataset && link.dataset.productName) {
+      return link.dataset.productName;
+    }
+    const card = link.closest('.model-card, .leaderboard-card, .review-card, .guide-comparison-card, .hp-model, article, section');
+    if (card) {
+      const heading = card.querySelector('h1, h2, h3, h4, .hp-model-name');
+      if (heading && heading.textContent.trim()) {
+        return heading.textContent.trim();
+      }
+    }
+    const tr = link.closest('tr');
+    if (tr) {
+      const prodA = tr.querySelector('a[href^="/products/"]');
+      if (prodA && prodA.textContent.trim()) {
+        return prodA.textContent.trim().replace(/\s*→\s*$/, '');
+      }
+      const th = tr.querySelector('th, td:first-child');
+      if (th && th.textContent.trim()) {
+        return th.textContent.trim();
+      }
+    }
+    if (window.location.pathname.startsWith('/products/')) {
+      const h1 = document.querySelector('h1');
+      if (h1 && h1.textContent.trim()) {
+        return h1.textContent.trim();
+      }
+    }
+    return link.getAttribute('aria-label') || link.textContent.trim() || 'Unknown Product';
+  }
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    if (!href || href === '#' || href.startsWith('javascript:')) return;
+    if (link.classList.contains('btn-coming-soon') || (link.textContent && link.textContent.trim().toLowerCase().includes('coming soon'))) return;
+
+    let destUrl;
+    try {
+      destUrl = new URL(link.href, window.location.origin);
+    } catch (err) {
+      return;
+    }
+
+    const rel = (link.getAttribute('rel') || '').toLowerCase();
+    const isSponsored = rel.includes('sponsored');
+    const isAffiliateDomain = /amzn\.to|amazon\.|anrdoezrs\.net|awin1\.com/i.test(destUrl.hostname);
+
+    if (!isSponsored && !isAffiliateDomain) return;
+
+    const productName = getAffiliateProductName(link, destUrl.href);
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'affiliate_click', {
+        product_name: productName,
+        source_page: window.location.pathname,
+        destination_domain: destUrl.hostname
+      });
+    }
+  });
+})();
