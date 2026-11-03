@@ -161,7 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '3TSWrkg': 'PETKIT Purobot Max 3',
     '17349725': 'PETKIT Purobot Max 3',
     '47KD14i': 'PETKIT Purobot Ultra',
-    '17052922': 'PETKIT Purobot Ultra'
+    '17052922': 'PETKIT Purobot Ultra',
+    'R0rPm2': 'CATLINK Scooper Pro Ultra'
   };
 
   function getAffiliateProductName(link, href) {
@@ -215,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const rel = (link.getAttribute('rel') || '').toLowerCase();
     const isSponsored = rel.includes('sponsored');
-    const isAffiliateDomain = /amzn\.to|amazon\.|anrdoezrs\.net|awin1\.com/i.test(destUrl.hostname);
+    const isAffiliateDomain = /amzn\.to|amazon\.|anrdoezrs\.net|awin1\.com|catlink\.sjv\.io/i.test(destUrl.hostname);
 
     if (!isSponsored && !isAffiliateDomain) return;
 
