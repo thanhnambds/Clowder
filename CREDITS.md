@@ -18,6 +18,9 @@ Official hardware press & product catalog imagery sourced directly from official
 - `assets/img/petkit-purobot-ultra.png`
   - Brand: PETKIT
   - Source: Official PETKIT Purobot Ultra Portal (https://www.petkit.com/products/purobot-ultra)
+- `assets/img/catlink-scooper-pro-ultra.jpg`
+  - Brand: CATLINK
+  - Source: CATLINK product catalog on Impact (affiliate program), image hosted on CATLINK's Shopify CDN, accessed Nov 4, 2026, used for product identification, not an endorsement.
 
 ## Stock Imagery (Unsplash)
 Editorial background imagery licensed under the Unsplash License (free for commercial and non-commercial use, no permission required):
