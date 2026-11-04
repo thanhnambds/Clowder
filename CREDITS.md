@@ -21,6 +21,12 @@ Official hardware press & product catalog imagery sourced directly from official
 - `assets/img/catlink-scooper-pro-ultra.jpg`
   - Brand: CATLINK
   - Source: CATLINK product catalog on Impact (affiliate program), image hosted on CATLINK's Shopify CDN, accessed Nov 4, 2026, used for product identification, not an endorsement.
+- `assets/img/catlink-scooper-pro-ultra-2.jpg`
+  - Brand: CATLINK
+  - Source: CATLINK Scooper Pro Ultra product page on catlinkus.com (image on CATLINK's Shopify CDN: ULTRA0), accessed Nov 4, 2026, used for product identification, not an endorsement.
+- `assets/img/catlink-scooper-pro-ultra-3.jpg`
+  - Brand: CATLINK
+  - Source: CATLINK Scooper Pro Ultra product page on catlinkus.com (image on CATLINK's Shopify CDN: DSC_7034), accessed Nov 4, 2026, used for product identification, not an endorsement.
 
 ## Stock Imagery (Unsplash)
 Editorial background imagery licensed under the Unsplash License (free for commercial and non-commercial use, no permission required):

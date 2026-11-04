@@ -23,6 +23,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/pages.css?v=20261017">
+  <style>
+    body.page .gallery-left .prod-main-img{background:#ebebeb}
+    .gallery-left .prod-main-img > a{display:block;align-self:stretch;flex:1;min-width:0}
+    .gallery-left .prod-main-img img{object-fit:contain}
+    .size-diagram{display:block;width:100%;height:auto;max-width:640px;font-family:inherit}
+    .size-diagram .sz-body{fill:var(--pg-mint);stroke:var(--pg-ink);stroke-width:2}
+    .size-diagram .sz-hole{fill:var(--pg-cream);stroke:var(--pg-ink);stroke-width:2}
+    .size-diagram .sz-floor{stroke:var(--pg-line);stroke-width:2}
+    .size-diagram .sz-dim{stroke:var(--pg-teal);stroke-width:2;marker-start:url(#sz-arrow);marker-end:url(#sz-arrow)}
+    .size-diagram .sz-guide{stroke:var(--pg-teal);stroke-width:1.5;stroke-dasharray:4 4}
+    .size-diagram .sz-arrowhead{fill:var(--pg-teal)}
+    .size-diagram .sz-head{fill:var(--pg-ink);font-size:22px;font-weight:700;text-anchor:middle}
+    .size-diagram .sz-label{fill:var(--pg-ink);font-size:20px;text-anchor:middle}
+    .size-diagram .sz-left{text-anchor:start}
+    .gallery-caption{font-size:12px;color:var(--color-muted);margin:0;line-height:1.4}
+    @media (min-width:1024px){
+      .gallery-left .prod-gallery-wrap{flex-direction:row-reverse;align-items:flex-start;align-content:flex-start;justify-content:flex-end;flex-wrap:wrap}
+      .gallery-left .prod-thumb-strip{flex-direction:column;overflow:visible;flex-shrink:0}
+      .gallery-left .prod-main-img{flex:1;min-width:0;min-height:0;aspect-ratio:1/1}
+      .gallery-left .gallery-caption{flex-basis:100%;text-align:right}
+    }
+    @media (max-width:640px){
+      body.page .prod-showcase-hero.gallery-left .prod-gallery-wrap{order:0!important}
+    }
+  </style>
 
   <!-- Open Graph -->
   <meta property="og:title" content="CATLINK Scooper Pro Ultra Specs | ClowderHub">
@@ -101,8 +126,37 @@
 
   <main>
     <!-- PRODUCT SHOWCASE HERO -->
-    <section class="prod-showcase-hero">
-      <div class="container" style="max-width: 860px;">
+    <section class="prod-showcase-hero gallery-left">
+      <div class="container prod-showcase-grid">
+
+        <!-- PRODUCT GALLERY -->
+        <div class="prod-gallery-wrap">
+          <div class="prod-main-img">
+            <a href="https://catlink.sjv.io/R0rPm2" target="_blank" rel="sponsored nofollow noopener">
+              <img id="main-product-img" src="/assets/img/catlink-scooper-pro-ultra.jpg" alt="CATLINK Scooper Pro Ultra automatic litter box, product image from CATLINK" width="1200" height="1200" loading="eager" style="object-fit: contain;">
+            </a>
+            <button type="button" class="prod-gallery-btn prev" aria-label="Previous image" onclick="stepProductMedia(this, -1)">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="prod-gallery-btn next" aria-label="Next image" onclick="stepProductMedia(this, 1)">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="prod-thumb-strip">
+            <div class="prod-thumb-item active" data-type="image" data-fit="contain" data-src="/assets/img/catlink-scooper-pro-ultra.jpg" onclick="selectProductMedia(this)">
+              <img src="/assets/img/catlink-scooper-pro-ultra.jpg" alt="CATLINK Scooper Pro Ultra automatic litter box, product image from CATLINK" width="1200" height="1200" loading="lazy">
+            </div>
+            <div class="prod-thumb-item" data-type="image" data-fit="contain" data-src="/assets/img/catlink-scooper-pro-ultra-2.jpg" onclick="selectProductMedia(this)">
+              <img src="/assets/img/catlink-scooper-pro-ultra-2.jpg" alt="CATLINK Scooper Pro Ultra with the CATLINK app shown on a phone, product image from CATLINK" width="1000" height="1000" loading="lazy">
+            </div>
+            <div class="prod-thumb-item" data-type="image" data-fit="contain" data-src="/assets/img/catlink-scooper-pro-ultra-3.jpg" onclick="selectProductMedia(this)">
+              <img src="/assets/img/catlink-scooper-pro-ultra-3.jpg" alt="CATLINK Scooper Pro Ultra automatic litter box, second product image from CATLINK" width="1200" height="1200" loading="lazy">
+            </div>
+          </div>
+          <p class="gallery-caption">Images: CATLINK</p>
+        </div>
+
+        <!-- PRODUCT DETAILS PANEL -->
         <div class="prod-info-panel">
           <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
             <span class="top-pick-badge" style="background:#e0e7ff; color:#3730a3;">AI CAMERA · SPECS ONLY</span>
@@ -111,21 +165,6 @@
           <h1 style="font-size: 32px; font-weight: 800; line-height: 1.2; margin: 0; color: var(--color-dark);">
             CATLINK Scooper Pro Ultra: specs at a glance
           </h1>
-
-          <!-- PRODUCT IMAGE -->
-          <div style="text-align: center; margin: 20px 0 10px;">
-            <a href="https://catlink.sjv.io/R0rPm2" target="_blank" rel="sponsored nofollow noopener">
-              <img
-                src="/assets/img/catlink-scooper-pro-ultra.jpg"
-                alt="CATLINK Scooper Pro Ultra automatic litter box, product image from CATLINK"
-                width="1200"
-                height="1200"
-                loading="eager"
-                style="max-width: 480px; width: 100%; height: auto; object-fit: contain; background: #fff; padding: 20px; border-radius: 12px; display: block; margin: 0 auto;"
-              >
-            </a>
-            <p style="font-size: 12px; color: var(--color-muted); margin: 6px 0 0; line-height: 1.4;">Image: CATLINK (product catalog)</p>
-          </div>
 
           <div class="prod-byline-block" style="margin: 10px 0 14px; font-size: 13px; line-height: 1.5; color: var(--color-muted);">
             <div style="margin-bottom: 3px;">By <a href="/authors/sam-ellery" style="color: var(--color-dark); font-weight: 600; text-decoration: underline;">Sam Ellery</a>, pen name of the ClowderHub research desk · Updated Oct 27, 2026 · <a href="/methodology" style="color: var(--color-primary); text-decoration: underline;">How we compile specs</a></div>
@@ -180,6 +219,40 @@
             <p style="margin:0;"><strong>Think twice if:</strong> your cat is near or above 22 lb, or you have very small kittens under 3.3 lb.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- SIZE AT A GLANCE -->
+    <section class="content-section" style="padding: 40px 0 20px;">
+      <div class="container" style="max-width: 860px;">
+        <h2>Size at a glance</h2>
+        <figure style="margin: 0;">
+          <svg class="size-diagram" viewBox="0 0 600 440" role="img" aria-labelledby="size-title size-desc">
+            <title id="size-title">CATLINK Scooper Pro Ultra overall size schematic</title>
+            <desc id="size-desc">Front and side outlines with three dimension arrows: overall height 28 in (71 cm), overall width 22.8 in (58 cm), overall depth 23.6 in (60 cm). A plain circle marks a round opening. Listed as text: entrance size 13 x 10.6 in (33 x 27 cm), entrance height 14 in (35.5 cm), waste drawer 13 L, globe capacity 65 L.</desc>
+            <defs>
+              <marker id="sz-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" class="sz-arrowhead"/>
+              </marker>
+            </defs>
+            <text x="160" y="36" class="sz-head">Front</text>
+            <text x="472" y="36" class="sz-head">Side</text>
+            <line x1="20" y1="280" x2="585" y2="280" class="sz-floor"/>
+            <rect x="70" y="60" width="180" height="220" rx="18" class="sz-body"/>
+            <circle cx="160" cy="150" r="45" class="sz-hole"/>
+            <rect x="380" y="60" width="185" height="220" rx="18" class="sz-body"/>
+            <line x1="40" y1="62" x2="40" y2="278" class="sz-dim"/>
+            <text x="26" y="170" class="sz-label" transform="rotate(-90 26 170)">28 in (71 cm)</text>
+            <line x1="72" y1="304" x2="248" y2="304" class="sz-dim"/>
+            <text x="160" y="332" class="sz-label">22.8 in (58 cm)</text>
+            <line x1="382" y1="304" x2="563" y2="304" class="sz-dim"/>
+            <text x="472" y="332" class="sz-label">23.6 in (60 cm)</text>
+            <text x="300" y="374" class="sz-label">Entrance size: 13 x 10.6 in (33 x 27 cm)</text>
+            <text x="300" y="400" class="sz-label">Entrance height: 14 in (35.5 cm)</text>
+            <text x="300" y="426" class="sz-label">Waste drawer 13 L · Globe capacity 65 L</text>
+          </svg>
+          <figcaption style="font-size: 12px; color: var(--color-muted); margin-top: 8px; line-height: 1.4;">Schematic from the maker's published dimensions, read on Oct 27, 2026. Not to scale. The maker does not say where the entrance figures are measured.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -398,6 +471,35 @@
       window.addEventListener('scroll', updateBttProgress, { passive: true });
       window.addEventListener('resize', updateBttProgress, { passive: true });
       updateBttProgress();
+    }
+
+    function selectProductMedia(thumbEl) {
+      const wrap = thumbEl.closest('.prod-gallery-wrap');
+      if (!wrap) return;
+      const imgEl = wrap.querySelector('#main-product-img');
+      const src = thumbEl.getAttribute('data-src');
+      const thumbImg = thumbEl.querySelector('img');
+
+      wrap.querySelectorAll('.prod-thumb-item').forEach(el => el.classList.remove('active'));
+      thumbEl.classList.add('active');
+      thumbEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+
+      if (imgEl && src) {
+        imgEl.src = src;
+        if (thumbImg) imgEl.alt = thumbImg.alt;
+        imgEl.style.objectFit = thumbEl.getAttribute('data-fit') || 'contain';
+        imgEl.style.display = 'block';
+      }
+    }
+
+    function stepProductMedia(btnEl, delta) {
+      const wrap = btnEl.closest('.prod-gallery-wrap');
+      if (!wrap) return;
+      const thumbs = Array.from(wrap.querySelectorAll('.prod-thumb-item'));
+      if (!thumbs.length) return;
+      const currentIdx = thumbs.findIndex(el => el.classList.contains('active'));
+      const nextIdx = (currentIdx + delta + thumbs.length) % thumbs.length;
+      selectProductMedia(thumbs[nextIdx]);
     }
   </script>
 </body>
