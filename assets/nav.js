@@ -162,12 +162,23 @@ document.addEventListener('DOMContentLoaded', () => {
     '17349725': 'PETKIT Purobot Max 3',
     '47KD14i': 'PETKIT Purobot Ultra',
     '17052922': 'PETKIT Purobot Ultra',
-    'R0rPm2': 'CATLINK Scooper Pro Ultra'
+    'R0rPm2': 'CATLINK Scooper Pro Ultra',
+    'bkB9zB': 'CATLINK Scooper Luxury Pro-X',
+    'yZKQ3D': 'CATLINK Scooper SE',
+    '7X6kr3': 'CATLINK Scooper Open-X',
+    'DW6zGy': 'CATLINK Scoop Robot Pro',
+    'm1-lite-self-cleaning-cat-litter-box': 'Neakasa M1 Lite Plus',
+    'neakasa-m9-smart-litter-box': 'Neakasa M9',
+    'purobot-crystal-duo': 'PETKIT Purobot Crystal Duo'
   };
+  // Longest key first, so specific keys win over generic ones like 'neakasa'.
+  const urlProductKeys = Object.keys(urlProductMap).sort((a, b) => b.length - a.length);
 
   function getAffiliateProductName(link, href) {
-    for (const key in urlProductMap) {
-      if (href.includes(key)) return urlProductMap[key];
+    let decoded = href;
+    try { decoded = decodeURIComponent(href); } catch (err) {}
+    for (const key of urlProductKeys) {
+      if (href.includes(key) || decoded.includes(key)) return urlProductMap[key];
     }
     if (link.dataset && link.dataset.productName) {
       return link.dataset.productName;
