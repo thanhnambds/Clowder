@@ -122,7 +122,7 @@
         <ul class="nav-menu" id="nav-menu">
           <li><a href="/" class="nav-link">Home</a></li>
           <li class="nav-item-dropdown">
-            <button type="button" class="nav-link nav-dropdown-toggle active" id="guides-menu-btn" aria-expanded="false" aria-controls="guides-dropdown" aria-haspopup="true">
+            <button type="button" class="nav-link nav-dropdown-toggle" id="guides-menu-btn" aria-expanded="false" aria-controls="guides-dropdown" aria-haspopup="true">
               Guides
               <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                 <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -134,7 +134,7 @@
               <li><a href="/guides/best-litter-box-for-large-cats" class="dropdown-link">Large cats</a></li>
               <li><a href="/guides/are-automatic-litter-boxes-worth-it" class="dropdown-link">Is it worth it?</a></li>
               <li><a href="/guides/litter-robot-alternatives" class="dropdown-link">Litter-Robot alternatives</a></li>
-              <li><a href="/tools/litter-box-finder" class="dropdown-link active" aria-current="page">Litter box finder</a></li>
+              <li><a href="/tools/litter-box-finder" class="dropdown-link active">Litter box finder</a></li>
             </ul>
           </li>
           <li class="nav-item-dropdown">
@@ -154,6 +154,7 @@
               <li><a href="/products/catlink-scooper-pro-ultra" class="dropdown-link">CATLINK Scooper Pro Ultra</a></li>
             </ul>
           </li>
+          <li><a href="/tools/litter-box-finder" class="nav-link active" aria-current="page">Finder</a></li>
           <li><a href="/guides/best-automatic-litter-box" class="nav-cta">Compare 3 Top Models →</a></li>
         </ul>
       </nav>
@@ -384,9 +385,36 @@
         $('nf-count').textContent = 'Showing ' + shown + ' of ' + rows.length + ' models';
       }
 
-      inputs.forEach(el => el.addEventListener('input', apply));
-      $('nf-reset').addEventListener('click', () => { $('nf-form').reset(); apply(); });
+      // URL params: ?weight=&budget=&design=&camera=&waste= (invalid values are ignored)
+      const NUM = { weight: ['nf-weight', 1, 40], budget: ['nf-budget', 50, 3000], waste: ['nf-waste', 1, 30] };
+      const OPT = { design: ['nf-design', ['drum', 'open']], camera: ['nf-camera', ['yes']] };
+      const KEYS = { weight: 'nf-weight', budget: 'nf-budget', design: 'nf-design', camera: 'nf-camera', waste: 'nf-waste' };
+      function readParams() {
+        const p = new URLSearchParams(location.search);
+        for (const k in NUM) {
+          const [id, lo, hi] = NUM[k], v = (p.get(k) || '').trim(), n = Number(v);
+          if (v !== '' && Number.isFinite(n) && n >= lo && n <= hi) $(id).value = v;
+        }
+        for (const k in OPT) {
+          const [id, ok] = OPT[k];
+          if (ok.includes(p.get(k))) $(id).value = p.get(k);
+        }
+      }
+      function writeParams() {
+        const p = new URLSearchParams();
+        for (const k in KEYS) {
+          const v = $(KEYS[k]).value.trim();
+          if (v !== '') p.set(k, v);
+        }
+        const q = p.toString();
+        history.replaceState(null, '', location.pathname + (q ? '?' + q : '') + location.hash);
+      }
+
+      inputs.forEach(el => el.addEventListener('input', () => { apply(); writeParams(); }));
+      $('nf-reset').addEventListener('click', () => { $('nf-form').reset(); apply(); writeParams(); });
+      readParams();
       apply();
+      writeParams();
     })();
   </script>
 

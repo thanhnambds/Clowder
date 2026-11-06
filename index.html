@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/home.css?v=20261017">
+  <link rel="stylesheet" href="/assets/home.css?v=20261106">
 
   <!-- Open Graph -->
   <meta property="og:title" content="ClowderHub: Automatic Litter Box Comparisons">
@@ -136,6 +136,7 @@
               <li><a href="/products/catlink-scooper-pro-ultra" class="dropdown-link">CATLINK Scooper Pro Ultra</a></li>
             </ul>
           </li>
+          <li><a href="/tools/litter-box-finder" class="nav-link">Finder</a></li>
           <li><a href="/guides/best-automatic-litter-box" class="nav-cta">Compare 3 Top Models →</a></li>
         </ul>
       </nav>
@@ -162,6 +163,22 @@
         <span class="hp-chip hp-chip-spec"><small>Litter-Robot 5 opening</small><b>15.75 in</b></span>
         <span class="hp-chip hp-chip-date">Updated Oct 2026</span>
       </div>
+    </div>
+  </section>
+
+  <!-- FINDER BOX -->
+  <section class="hp-finder" aria-labelledby="hp-finder-title">
+    <div class="container">
+      <form class="hp-finder-box" action="/tools/litter-box-finder" method="get">
+        <h2 class="hp-finder-title" id="hp-finder-title">Find a litter box that fits your cat</h2>
+        <div class="hp-finder-fields">
+          <label>Your cat's weight (lb)<input type="number" name="weight" min="1" max="40" step="0.1" inputmode="decimal" placeholder="e.g. 14"></label>
+          <label>Max budget (USD)<input type="number" name="budget" min="50" max="3000" step="1" inputmode="numeric" placeholder="e.g. 500"></label>
+          <label>Design<select name="design"><option value="">Any</option><option value="drum">Rotating drum or capsule</option><option value="open">Open-top or open-view</option></select></label>
+          <button type="submit" class="hp-btn hp-btn-main">Find matches</button>
+        </div>
+        <p class="hp-finder-note">Filters 13 models by the maker's published numbers. We don't test litter boxes.</p>
+      </form>
     </div>
   </section>
 

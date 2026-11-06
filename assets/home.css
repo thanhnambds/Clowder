@@ -180,3 +180,20 @@ body.home .back-to-top-btn{background:var(--hp-ink)}
   .hp-fact b{font-size:26px}
   .hp-fact span{font-size:12px;line-height:1.3}
 }
+
+/* homepage finder box */
+.hp-finder{padding:0 0 72px}
+.hp-finder-box{background:#fff;border:1px solid #E2E8E4;border-radius:24px;padding:28px 32px}
+.hp-finder-title{font-family:'Bricolage Grotesque','Figtree',system-ui,sans-serif;font-size:26px;font-weight:800;line-height:1.15;letter-spacing:-.02em;margin:0 0 18px}
+.hp-finder-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:16px;align-items:end}
+.hp-finder-fields label{display:flex;flex-direction:column;gap:6px;min-width:0;font-size:14px;font-weight:600}
+.hp-finder-fields input,.hp-finder-fields select{width:100%;min-width:0;min-height:48px;box-sizing:border-box;padding:0 14px;border:1.5px solid #C9D3CE;border-radius:12px;background:#fff;color:var(--hp-ink);font:400 16px 'Figtree',system-ui,sans-serif}
+.hp-finder-fields .hp-btn{border:0;cursor:pointer;font-family:inherit}
+.hp-finder-note{margin:14px 0 0;font-size:14px;color:var(--hp-muted)}
+@media (max-width:1024px){.hp-finder{padding:0 0 56px}}
+@media (max-width:640px){
+  .hp-finder-box{padding:20px 16px}
+  .hp-finder-title{font-size:22px}
+  .hp-finder-fields{grid-template-columns:1fr 1fr;gap:12px}
+  .hp-finder-fields label:nth-child(3),.hp-finder-fields .hp-btn{grid-column:1/-1}
+}
