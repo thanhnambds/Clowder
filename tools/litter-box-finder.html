@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1Z43N7MKG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G1Z43N7MKG');
+  </script>
+  <title>Automatic Litter Box Finder: Filter by Maker Specs | ClowderHub</title>
+  <meta name="description" content="Filter 13 automatic litter boxes by cat weight, budget, design, camera and waste drawer size. Every figure comes from the maker&#x27;s own product page, with the date we read it.">
+  <link rel="canonical" href="https://www.clowderhub.com/tools/litter-box-finder">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="stylesheet" href="/assets/style.css?v=20261017">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/pages.css?v=20261017">
+  <style>
+    .nf-intro{font-size:16px;color:var(--color-slate);line-height:1.6;margin:0 0 24px;max-width:760px}
+    .nf-intro a,.nf-disclosure a,.nf-table a:not(.nf-buy){color:var(--color-primary);text-decoration:underline}
+    .nf-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;align-items:end;background:var(--pg-cream);border:1.5px solid var(--pg-line);border-radius:var(--radius-md);padding:18px;margin:0 0 14px}
+    .nf-filters label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:var(--color-dark)}
+    .nf-filters input,.nf-filters select{font:inherit;font-size:15px;font-weight:400;min-height:44px;padding:8px 10px;border:1.5px solid var(--pg-line);border-radius:10px;background:#fff;width:100%;box-sizing:border-box}
+    .nf-reset{font:inherit;font-size:14px;font-weight:600;min-height:44px;padding:8px 16px;border-radius:999px;border:1.5px solid var(--pg-ink);background:#fff;color:var(--pg-ink);cursor:pointer}
+    .nf-count{font-size:15px;font-weight:600;margin:0 0 18px}
+    .nf-disclosure{font-size:13px;color:var(--color-muted);margin:0 0 10px}
+    .nf-table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.45}
+    .nf-table th,.nf-table td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid var(--pg-line)}
+    .nf-table thead th{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--color-muted);background:var(--pg-cream);position:sticky;top:0}
+    .nf-table tbody th{font-weight:400;min-width:150px}
+    .nf-table tr[hidden]{display:none!important}
+    .nf-model{display:block;font-weight:700;color:var(--color-dark)}
+    .nf-sub,.nf-ns{font-size:12.5px;color:var(--color-muted)}
+    .nf-ns{font-style:italic}
+    .nf-sub{display:inline-block}
+    .nf-note{display:block;font-size:12.5px;color:var(--color-slate);margin-top:6px}
+    .nf-flag{display:block;font-size:12.5px;color:var(--pg-muted);background:var(--pg-sand);border-radius:8px;padding:4px 8px;margin-top:6px}
+    .nf-flag[hidden]{display:none}
+    .nf-details{min-width:130px}
+    .nf-details a{display:block;margin-bottom:8px}
+    .nf-buy{display:inline-block!important;font-size:13px;font-weight:600;padding:8px 12px;border-radius:999px;background:var(--pg-teal);color:#fff;text-decoration:none;white-space:nowrap}
+    .nf-foot{font-size:13px;color:var(--color-muted);margin:14px 0 0}
+    @media (max-width:640px){
+      .nf-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+      .nf-table,.nf-table tbody,.nf-table tr,.nf-table th,.nf-table td{display:block;width:100%;box-sizing:border-box}
+      .nf-table tr{border:1.5px solid var(--pg-line);border-radius:16px;padding:6px 14px;margin:0 0 14px;background:#fff}
+      .nf-table tbody th{border-bottom:1px solid var(--pg-line);padding:10px 0}
+      .nf-table td{display:grid;grid-template-columns:42% 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--pg-line)}
+      .nf-table td:last-child{border-bottom:0}
+      .nf-table td::before{content:attr(data-label);font-size:12px;font-weight:600;text-transform:uppercase;color:var(--color-muted)}
+      .nf-buy{white-space:normal}
+    }
+  </style>
+
+  <meta property="og:title" content="Automatic Litter Box Finder: Filter by Maker Specs | ClowderHub">
+  <meta property="og:description" content="Filter 13 automatic litter boxes by cat weight, budget, design, camera and waste drawer size. Every figure comes from the maker&#x27;s own product page, with the date we read it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.clowderhub.com/tools/litter-box-finder">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Automatic Litter Box Finder: Filter by Maker Specs | ClowderHub">
+  <meta name="twitter:description" content="Filter 13 automatic litter boxes by cat weight, budget, design, camera and waste drawer size. Every figure comes from the maker&#x27;s own product page, with the date we read it.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Automatic litter box finder: filter by the maker's numbers",
+        "description": "Filter 13 automatic litter boxes by cat weight, budget, design, camera and waste drawer size. Every figure comes from the maker&#x27;s own product page, with the date we read it.",
+        "url": "https://www.clowderhub.com/tools/litter-box-finder",
+        "inLanguage": "en-US",
+        "dateModified": "2026-11-06",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ClowderHub"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.clowderhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Litter box finder",
+            "item": "https://www.clowderhub.com/tools/litter-box-finder"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script src="/assets/nav.js?v=20261028" defer></script>
+</head>
+<body class="page">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo-wrap"><img src="/assets/img/logo-clowderhub.png" alt="ClowderHub" width="180" height="36"></a>
+      <button class="hamburger-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item-dropdown">
+            <button type="button" class="nav-link nav-dropdown-toggle active" id="guides-menu-btn" aria-expanded="false" aria-controls="guides-dropdown" aria-haspopup="true">
+              Guides
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" id="guides-dropdown" aria-labelledby="guides-menu-btn">
+              <li><a href="/guides/best-automatic-litter-box" class="dropdown-link">Overview</a></li>
+              <li><a href="/guides/best-self-cleaning-litter-box-for-multiple-cats" class="dropdown-link">Multiple cats</a></li>
+              <li><a href="/guides/best-litter-box-for-large-cats" class="dropdown-link">Large cats</a></li>
+              <li><a href="/guides/are-automatic-litter-boxes-worth-it" class="dropdown-link">Is it worth it?</a></li>
+              <li><a href="/guides/litter-robot-alternatives" class="dropdown-link">Litter-Robot alternatives</a></li>
+              <li><a href="/tools/litter-box-finder" class="dropdown-link active" aria-current="page">Litter box finder</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-dropdown">
+            <button type="button" class="nav-link nav-dropdown-toggle" id="models-menu-btn" aria-expanded="false" aria-controls="models-dropdown" aria-haspopup="true">
+              Models
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" id="models-dropdown" aria-labelledby="models-menu-btn">
+              <li><a href="/guides/best-automatic-litter-box#showdown" class="dropdown-link">Compare top picks</a></li>
+              <li><a href="/products/litter-robot-5" class="dropdown-link">Litter-Robot 5</a></li>
+              <li><a href="/products/neakasa-m1" class="dropdown-link">Neakasa M1 Plus</a></li>
+              <li><a href="/products/petkit-purobot-max-pro-2" class="dropdown-link">PETKIT Purobot Max Pro 2</a></li>
+              <li><a href="/products/petkit-purobot-max-3" class="dropdown-link">PETKIT Purobot Max 3</a></li>
+              <li><a href="/products/petkit-purobot-ultra" class="dropdown-link">PETKIT Purobot Ultra</a></li>
+              <li><a href="/products/catlink-scooper-pro-ultra" class="dropdown-link">CATLINK Scooper Pro Ultra</a></li>
+            </ul>
+          </li>
+          <li><a href="/guides/best-automatic-litter-box" class="nav-cta">Compare 3 Top Models →</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs">
+    <div class="container">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Litter box finder</span>
+    </div>
+  </nav>
+
+  <main style="padding: 30px 0 80px;">
+    <div class="container">
+      <h1 style="font-size: 34px; font-weight: 800; line-height: 1.2; margin: 0 0 14px; color: var(--color-dark);">Automatic litter box finder: filter by the maker's numbers</h1>
+      <p class="nf-intro">This tool filters 13 automatic litter boxes by your cat's weight, your budget, the design, a camera and the waste drawer size. Every figure comes from the maker's own product page, and each row shows the date we read it. We do not test litter boxes. <a href="/methodology">How we compile specs</a></p>
+
+      <form class="nf-filters" id="nf-form" onsubmit="return false">
+        <label>Your cat's weight (lb)<input type="number" id="nf-weight" min="0" step="0.1" inputmode="decimal" placeholder="e.g. 14"></label>
+        <label>Max budget (USD)<input type="number" id="nf-budget" min="0" step="1" inputmode="numeric" placeholder="e.g. 500"></label>
+        <label>Design<select id="nf-design"><option value="">Any</option><option value="drum">Rotating drum or capsule</option><option value="open">Open-top or open-view</option></select></label>
+        <label>Camera<select id="nf-camera"><option value="">Any</option><option value="yes">Must have</option></select></label>
+        <label>Min waste drawer (L)<input type="number" id="nf-waste" min="0" step="0.5" inputmode="decimal" placeholder="e.g. 10"></label>
+        <button type="button" class="nf-reset" id="nf-reset">Reset</button>
+      </form>
+      <p class="nf-count" id="nf-count" aria-live="polite">Showing 13 of 13 models</p>
+      <p class="nf-sub" style="margin:-10px 0 18px;">Rows with missing figures stay in the results. A filter only hides a model when the maker's stated number fails it.</p>
+
+      <p class="nf-disclosure">Some links on this page are affiliate links. We may earn a commission at no extra cost to you. <a href="/affiliate-disclosure">Details</a></p>
+      <table class="nf-table" id="nf-table">
+        <thead>
+          <tr>
+            <th scope="col">Model</th>
+            <th scope="col">Price</th>
+            <th scope="col">Design</th>
+            <th scope="col">Cat weight</th>
+            <th scope="col">Waste drawer (L)</th>
+            <th scope="col">Entrance height (in)</th>
+            <th scope="col">Noise (dB)</th>
+            <th scope="col">Camera</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="litter-robot-5" data-price="799" data-design="drum" data-wmin="3" data-wmax="30" data-camera="" data-waste="">
+            <th scope="row" data-label="Model"><span class="nf-model">Whisker Litter-Robot 5</span><span class="nf-sub">Specs read Oct 9, 2026</span><span class="nf-note">Whisker gives bin life (up to 10 days for one cat), not drawer volume.</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>As low as $799 (Litter-Robot 5 Pro: as low as $899)<br><span class="nf-sub">as of Oct 12, 2026</span></div></td>
+            <td data-label="Design"><div>Drum<br><span class="nf-sub">Maker: "enclosed rotating globe"</span></div></td>
+            <td data-label="Cat weight"><div>3–30 lb</div></td>
+            <td data-label="Waste drawer (L)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Entrance height (in)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Noise (dB)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Camera"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Details" class="nf-details"><div><a href="/products/litter-robot-5">Our specs page</a><a href="https://amzn.to/4jdkN2t" target="_blank" rel="sponsored noopener noreferrer" class="nf-buy">Check on Amazon &rarr;</a></div></td>
+          </tr>
+          <tr id="neakasa-m1" data-price="379.99" data-design="open" data-wmin="2.2" data-wmax="33" data-camera="" data-waste="11.23">
+            <th scope="row" data-label="Model"><span class="nf-model">Neakasa M1 Plus</span><span class="nf-sub">Specs read Oct 9, 2026</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$379.99 on Neakasa&#x27;s site (regular $549.99), $399.99 on Amazon<br><span class="nf-sub">as of Oct 12, 2026</span></div></td>
+            <td data-label="Design"><div>Open-top<br><span class="nf-sub">Maker: "open-top basin"</span></div></td>
+            <td data-label="Cat weight"><div>2.2–33 lb</div></td>
+            <td data-label="Waste drawer (L)"><div>11.23</div></td>
+            <td data-label="Entrance height (in)"><div>13.86</div></td>
+            <td data-label="Noise (dB)"><div>50</div></td>
+            <td data-label="Camera"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Details" class="nf-details"><div><a href="/products/neakasa-m1">Our specs page</a><a href="https://www.awin1.com/cread.php?awinmid=37918&amp;awinaffid=3125764&amp;ued=https%3A%2F%2Fneakasa.com%2Fproducts%2Fneakasa-m1-cat-litter-box" target="_blank" rel="sponsored noopener noreferrer" class="nf-buy">Check Neakasa Site &rarr;</a><a href="https://amzn.to/4e4hPtA" target="_blank" rel="sponsored noopener noreferrer" class="nf-buy">Check on Amazon &rarr;</a></div></td>
+          </tr>
+          <tr id="petkit-purobot-max-pro-2" data-price="499.99" data-design="drum" data-wmin="3.3" data-wmax="22" data-camera="yes" data-waste="8">
+            <th scope="row" data-label="Model"><span class="nf-model">PETKIT Purobot Max Pro 2</span><span class="nf-sub">Specs read Oct 9, 2026</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$499.99 (regular $599.99)<br><span class="nf-sub">as of Oct 12, 2026</span></div></td>
+            <td data-label="Design"><div>Drum<br><span class="nf-sub">Maker: "enclosed rotating cylinder"</span></div></td>
+            <td data-label="Cat weight"><div>3.3–22 lb</div></td>
+            <td data-label="Waste drawer (L)"><div>8</div></td>
+            <td data-label="Entrance height (in)"><div>10.03</div></td>
+            <td data-label="Noise (dB)"><div>35</div></td>
+            <td data-label="Camera"><div>AI camera</div></td>
+            <td data-label="Details" class="nf-details"><div><a href="/products/petkit-purobot-max-pro-2">Our specs page</a><a href="https://amzn.to/47UgK3X" target="_blank" rel="sponsored noopener noreferrer" class="nf-buy">Check on Amazon &rarr;</a><a href="https://www.anrdoezrs.net/click-101903570-17052926" target="_blank" rel="sponsored nofollow noopener" class="nf-buy">See it at PETKIT &rarr;</a></div></td>
+          </tr>
+          <tr id="petkit-purobot-max-3" data-price="399.99" data-design="drum" data-wmin="3.3" data-wmax="22" data-camera="" data-waste="7">
+            <th scope="row" data-label="Model"><span class="nf-model">PETKIT Purobot Max 3</span><span class="nf-sub">Specs read Oct 9, 2026</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$399.99 (regular $499.99)<br><span class="nf-sub">as of Oct 12, 2026</span></div></td>
+            <td data-label="Design"><div>Drum<br><span class="nf-sub">Maker: "rotating cylinder"</span></div></td>
+            <td data-label="Cat weight"><div>3.3–22 lb</div></td>
+            <td data-label="Waste drawer (L)"><div>7</div></td>
+            <td data-label="Entrance height (in)"><div>8.03</div></td>
+            <td data-label="Noise (dB)"><div>35</div></td>
+            <td data-label="Camera"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Details" class="nf-details"><div><a href="/products/petkit-purobot-max-3">Our specs page</a><a href="https://amzn.to/3TSWrkg" target="_blank" rel="sponsored noopener noreferrer" class="nf-buy">Check on Amazon &rarr;</a><a href="https://www.anrdoezrs.net/click-101903570-17349725" target="_blank" rel="sponsored nofollow noopener" class="nf-buy">See it at PETKIT &rarr;</a></div></td>
+          </tr>
+          <tr id="petkit-purobot-ultra" data-price="799.99" data-design="drum" data-wmin="3.3" data-wmax="22" data-camera="" data-waste="">
+            <th scope="row" data-label="Model"><span class="nf-model">PETKIT Purobot Ultra</span><span class="nf-sub">Specs read Oct 9, 2026</span><span class="nf-note">PETKIT gives bin life (up to 20 days for one cat), not bin volume.</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$799.99 (regular $899.99)<br><span class="nf-sub">as of Oct 12, 2026</span></div></td>
+            <td data-label="Design"><div>Drum<br><span class="nf-sub">Maker: "auto-sealing cylinder"</span></div></td>
+            <td data-label="Cat weight"><div>3.3–22 lb</div></td>
+            <td data-label="Waste drawer (L)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Entrance height (in)"><div>10.43</div></td>
+            <td data-label="Noise (dB)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Camera"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Details" class="nf-details"><div><a href="/products/petkit-purobot-ultra">Our specs page</a><a href="https://amzn.to/47KD14i" target="_blank" rel="sponsored noopener noreferrer" class="nf-buy">Check on Amazon &rarr;</a><a href="https://www.anrdoezrs.net/click-101903570-17052922" target="_blank" rel="sponsored nofollow noopener" class="nf-buy">See it at PETKIT &rarr;</a></div></td>
+          </tr>
+          <tr id="catlink-scooper-pro-ultra" data-price="599" data-design="drum" data-wmin="3.3" data-wmax="22" data-camera="yes" data-waste="13">
+            <th scope="row" data-label="Model"><span class="nf-model">CATLINK Scooper Pro Ultra</span><span class="nf-sub">Specs read Oct 27, 2026</span><span class="nf-note">The Product Details section of the maker&#x27;s page gives 3 lb 8 oz as the minimum cat weight.</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$599.00<br><span class="nf-sub">as of Oct 27, 2026</span></div></td>
+            <td data-label="Design"><div>Drum<br><span class="nf-sub">Maker: "globe"</span></div></td>
+            <td data-label="Cat weight"><div>3.3–22 lb</div></td>
+            <td data-label="Waste drawer (L)"><div>13</div></td>
+            <td data-label="Entrance height (in)"><div>14</div></td>
+            <td data-label="Noise (dB)"><div>40</div></td>
+            <td data-label="Camera"><div>Built-in 1080P</div></td>
+            <td data-label="Details" class="nf-details"><div><a href="/products/catlink-scooper-pro-ultra">Our specs page</a><a href="https://catlink.sjv.io/R0rPm2" target="_blank" rel="sponsored nofollow noopener" class="nf-buy">See it at CATLINK &rarr;</a></div></td>
+          </tr>
+          <tr id="catlink-luxury-pro-x" data-price="439" data-design="drum" data-wmin="3.3" data-wmax="22" data-camera="" data-waste="13">
+            <th scope="row" data-label="Model"><span class="nf-model">CATLINK Scooper Luxury Pro-X</span><span class="nf-sub">Specs read Nov 6, 2026</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$439.00<br><span class="nf-sub">as of Nov 6, 2026</span></div></td>
+            <td data-label="Design"><div>Drum<br><span class="nf-sub">Maker: "globe"</span></div></td>
+            <td data-label="Cat weight"><div>3.3–22 lb</div></td>
+            <td data-label="Waste drawer (L)"><div>13</div></td>
+            <td data-label="Entrance height (in)"><div>14</div></td>
+            <td data-label="Noise (dB)"><div>40</div></td>
+            <td data-label="Camera"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Details" class="nf-details"><div><a href="https://www.catlinkus.com/products/catlink-self-cleaning-cat-litter-box-pro" rel="nofollow noopener" target="_blank">Maker's page</a></div></td>
+          </tr>
+          <tr id="catlink-scooper-se" data-price="259" data-design="drum" data-wmin="3.5" data-wmax="22" data-camera="" data-waste="7">
+            <th scope="row" data-label="Model"><span class="nf-model">CATLINK Scooper SE</span><span class="nf-sub">Specs read Nov 6, 2026</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$259.00<br><span class="nf-sub">as of Nov 6, 2026</span></div></td>
+            <td data-label="Design"><div>Drum<br><span class="nf-sub">Maker: "globe"</span></div></td>
+            <td data-label="Cat weight"><div>3.5–22 lb</div></td>
+            <td data-label="Waste drawer (L)"><div>7</div></td>
+            <td data-label="Entrance height (in)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Noise (dB)"><div>40</div></td>
+            <td data-label="Camera"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Details" class="nf-details"><div><a href="https://www.catlinkus.com/products/catlink-smart-litter-box-scooper-se" rel="nofollow noopener" target="_blank">Maker's page</a></div></td>
+          </tr>
+          <tr id="catlink-open-x" data-price="199" data-design="open" data-wmin="3.3" data-wmax="" data-camera="" data-waste="12">
+            <th scope="row" data-label="Model"><span class="nf-model">CATLINK Scooper Open-X (Multi-Cat)</span><span class="nf-sub">Specs read Nov 6, 2026</span><span class="nf-note">Size is the maker&#x27;s shipping configuration, globe at its lowest position.</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$199.00<br><span class="nf-sub">as of Nov 6, 2026</span></div></td>
+            <td data-label="Design"><div>Open-top<br><span class="nf-sub">Maker: "open design"</span></div></td>
+            <td data-label="Cat weight"><div>3.3 lb min<br><span class="nf-ns">Max not stated by maker</span></div></td>
+            <td data-label="Waste drawer (L)"><div>12</div></td>
+            <td data-label="Entrance height (in)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Noise (dB)"><div>under 35 (maker&#x27;s FAQ)</div></td>
+            <td data-label="Camera"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Details" class="nf-details"><div><a href="https://www.catlinkus.com/products/scooper-open-x" rel="nofollow noopener" target="_blank">Maker's page</a></div></td>
+          </tr>
+          <tr id="catlink-scoop-robot-pro" data-price="699" data-design="drum" data-wmin="" data-wmax="" data-camera="yes" data-waste="">
+            <th scope="row" data-label="Model"><span class="nf-model">CATLINK Scoop Robot Pro</span><span class="nf-sub">Specs read Nov 6, 2026</span><span class="nf-note">The maker&#x27;s page lists both 12 L and 15 L for the waste bin. Includes a 4 L auto refill system.</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$699.00<br><span class="nf-sub">as of Nov 6, 2026</span></div></td>
+            <td data-label="Design"><div>Drum<br><span class="nf-sub">Maker: "fully enclosed capsule"</span></div></td>
+            <td data-label="Cat weight"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Waste drawer (L)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Entrance height (in)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Noise (dB)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Camera"><div>Dual (inside and outside)</div></td>
+            <td data-label="Details" class="nf-details"><div><a href="https://www.catlinkus.com/products/catlink-self-cleaning-litter-box-scoop-robot-pro" rel="nofollow noopener" target="_blank">Maker's page</a></div></td>
+          </tr>
+          <tr id="petkit-crystal-duo" data-price="199.99" data-design="open" data-wmin="3.3" data-wmax="" data-camera="yes" data-waste="">
+            <th scope="row" data-label="Model"><span class="nf-model">PETKIT Purobot Crystal Duo</span><span class="nf-sub">Specs read Nov 6, 2026</span><span class="nf-note">Uses a disposable crystal litter tray instead of a waste drawer. The maker says a tray lasts up to 30 days.</span><span class="nf-note">Litter: PETKIT crystal litter only.</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$199.99<br><span class="nf-sub">as of Nov 6, 2026</span></div></td>
+            <td data-label="Design"><div>Open-top<br><span class="nf-sub">Maker: "open-top"</span></div></td>
+            <td data-label="Cat weight"><div>3.3 lb min<br><span class="nf-ns">Max not stated by maker</span></div></td>
+            <td data-label="Waste drawer (L)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Entrance height (in)"><div>7.08</div></td>
+            <td data-label="Noise (dB)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Camera"><div>AI camera</div></td>
+            <td data-label="Details" class="nf-details"><div><a href="https://www.petkit.com/products/purobot-crystal-duo-cat-litter-box-with-camera" rel="nofollow noopener" target="_blank">Maker's page</a></div></td>
+          </tr>
+          <tr id="neakasa-m1-lite-plus" data-price="379.99" data-design="open" data-wmin="2.2" data-wmax="33" data-camera="" data-waste="11.23">
+            <th scope="row" data-label="Model"><span class="nf-model">Neakasa M1 Lite Plus</span><span class="nf-sub">Specs read Nov 6, 2026</span><span class="nf-note">Litter capacity 7.17 L.</span><span class="nf-note">Warranty: 2 years (site banner).</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$379.99<br><span class="nf-sub">as of Nov 6, 2026</span></div></td>
+            <td data-label="Design"><div>Open-top<br><span class="nf-sub">Maker: "Open-Top"</span></div></td>
+            <td data-label="Cat weight"><div>2.2–33 lb</div></td>
+            <td data-label="Waste drawer (L)"><div>11.23</div></td>
+            <td data-label="Entrance height (in)"><div>13.86</div></td>
+            <td data-label="Noise (dB)"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Camera"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Details" class="nf-details"><div><a href="https://neakasa.com/products/m1-lite-self-cleaning-cat-litter-box" rel="nofollow noopener" target="_blank">Maker's page</a></div></td>
+          </tr>
+          <tr id="neakasa-m9" data-price="389.99" data-design="open" data-wmin="" data-wmax="" data-camera="" data-waste="6">
+            <th scope="row" data-label="Model"><span class="nf-model">Neakasa M9 Open-View</span><span class="nf-sub">Specs read Nov 6, 2026</span><span class="nf-note">Litter capacity up to 7 L. Kitten accessory required under 4.4 lb or 4 months.</span><span class="nf-note">Warranty: 2 years (site banner).</span><span class="nf-flag" hidden></span></th>
+            <td data-label="Price"><div>$389.99<br><span class="nf-sub">as of Nov 6, 2026</span></div></td>
+            <td data-label="Design"><div>Open-view<br><span class="nf-sub">Maker: "Open-View"</span></div></td>
+            <td data-label="Cat weight"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Waste drawer (L)"><div>6</div></td>
+            <td data-label="Entrance height (in)"><div>10.2</div></td>
+            <td data-label="Noise (dB)"><div>45 or less</div></td>
+            <td data-label="Camera"><div><span class="nf-ns">Not stated by maker</span></div></td>
+            <td data-label="Details" class="nf-details"><div><a href="https://neakasa.com/products/neakasa-m9-smart-litter-box" rel="nofollow noopener" target="_blank">Maker's page</a></div></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="nf-foot">Prices and specs were read from each maker's site on the date shown and can change. Check the maker's page before buying.</p>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const $ = id => document.getElementById(id);
+      const rows = Array.from(document.querySelectorAll('#nf-table tbody tr'));
+      const inputs = ['nf-weight', 'nf-budget', 'nf-design', 'nf-camera', 'nf-waste'].map($);
+      const num = v => (v === '' ? null : Number(v));
+
+      function apply() {
+        const w = num($('nf-weight').value), budget = num($('nf-budget').value);
+        const design = $('nf-design').value, camera = $('nf-camera').value, waste = num($('nf-waste').value);
+        let shown = 0;
+        rows.forEach(tr => {
+          const d = tr.dataset, kept = [];
+          const wmin = num(d.wmin), wmax = num(d.wmax), drawer = num(d.waste);
+          let hide = false;
+          if (w !== null) {
+            if ((wmin !== null && w < wmin) || (wmax !== null && w > wmax)) hide = true;
+            else if (wmin === null || wmax === null) kept.push('cat weight limit');
+          }
+          if (budget !== null && Number(d.price) > budget) hide = true;
+          if (design && d.design !== design) hide = true;
+          if (camera && !d.camera) kept.push('camera');
+          if (waste !== null) {
+            if (drawer === null) kept.push('waste drawer size');
+            else if (drawer < waste) hide = true;
+          }
+          tr.hidden = hide;
+          const flag = tr.querySelector('.nf-flag');
+          flag.hidden = hide || !kept.length;
+          flag.textContent = kept.length ? 'Kept: ' + kept.join(', ') + ' not stated by maker' : '';
+          if (!hide) shown++;
+        });
+        $('nf-count').textContent = 'Showing ' + shown + ' of ' + rows.length + ' models';
+      }
+
+      inputs.forEach(el => el.addEventListener('input', apply));
+      $('nf-reset').addEventListener('click', () => { $('nf-form').reset(); apply(); });
+      apply();
+    })();
+  </script>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="/assets/img/logo-clowderhub-white.png" alt="ClowderHub" width="160" height="32"></div>
+          <p style="margin-bottom: 16px; line-height: 1.6;">
+            ClowderHub compares automatic litter boxes using manufacturers' published specifications. We don't test products. We may earn a commission when you buy through our links.
+          </p>
+        </div>
+        <div>
+          <div class="footer-heading">Categories &amp; Guides</div>
+          <ul class="footer-links">
+            <li><a href="/guides/best-automatic-litter-box">Best Automatic Litter Boxes</a></li>
+            <li><a href="/guides/best-self-cleaning-litter-box-for-multiple-cats">Multiple Cats</a></li>
+            <li><a href="/guides/best-litter-box-for-large-cats">Large Cats</a></li>
+            <li><a href="/guides/litter-robot-alternatives">Litter-Robot Alternatives</a></li>
+          </ul>
+        </div>
+                <div>
+          <div class="footer-heading">Product Profiles</div>
+          <ul class="footer-links">
+            <li><a href="/products/litter-robot-5">Whisker Litter-Robot 5</a></li>
+            <li><a href="/products/neakasa-m1">Neakasa M1 Plus Open-Top</a></li>
+            <li><a href="/products/petkit-purobot-max-pro-2">PETKIT Purobot Max Pro 2</a></li>
+            <li><a href="/products/petkit-purobot-max-3">PETKIT Purobot Max 3</a></li>
+            <li><a href="/products/petkit-purobot-ultra">PETKIT Purobot Ultra</a></li>
+            <li><a href="/products/catlink-scooper-pro-ultra">CATLINK Scooper Pro Ultra</a></li>
+          </ul>
+        </div>
+
+<div>
+          <div class="footer-heading">Editorial Transparency</div>
+          <ul class="footer-links">
+            <li><a href="/about">About ClowderHub</a></li>
+            <li><a href="/authors/sam-ellery">Sam Ellery (research desk)</a></li>
+            <li><a href="/methodology">Our Research Methodology</a></li>
+            <li><a href="/affiliate-disclosure">Affiliate &amp; FTC Disclosure</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="margin-bottom: 8px;">As an Amazon Associate I earn from qualifying purchases.</p>
+        <p>
+          &copy; 2026 ClowderHub. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button with Circular Scroll Progress -->
+  <button id="backToTopBtn" class="back-to-top-btn" type="button" aria-label="Scroll back to top" title="Back to top">
+    <svg class="progress-ring" width="48" height="48" viewBox="0 0 48 48">
+      <circle class="progress-ring__circle-bg" stroke="rgba(0, 178, 137, 0.2)" stroke-width="3" fill="transparent" r="21" cx="24" cy="24"/>
+      <circle id="scrollProgressCircle" class="progress-ring__circle" stroke="#00b289" stroke-width="3" stroke-linecap="round" fill="transparent" r="21" cx="24" cy="24"/>
+    </svg>
+    <span class="back-to-top-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </span>
+  </button>
+
+
+  <script>
+    
+  
+    // Back to top floating button logic
+    const bttBtn = document.getElementById('backToTopBtn');
+    const bttCircle = document.getElementById('scrollProgressCircle');
+    if (bttBtn && bttCircle) {
+      const circumference = 2 * Math.PI * 21;
+      bttCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+      bttCircle.style.strokeDashoffset = circumference;
+
+      function updateBttProgress() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight || 0;
+        const clientHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+        const docHeight = scrollHeight - clientHeight;
+
+        if (scrollTop > 280) {
+          bttBtn.classList.add('is-visible');
+        } else {
+          bttBtn.classList.remove('is-visible');
+        }
+
+        if (docHeight > 0) {
+          const progress = Math.min(Math.max(scrollTop / docHeight, 0), 1);
+          bttCircle.style.strokeDashoffset = circumference - (progress * circumference);
+        }
+      }
+
+      bttBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      window.addEventListener('scroll', updateBttProgress, { passive: true });
+      window.addEventListener('resize', updateBttProgress, { passive: true });
+      updateBttProgress();
+    }
+
+  </script>
+</body>
+</html>

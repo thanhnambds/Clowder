@@ -37,6 +37,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.clowderhub.com/tools/litter-box-finder</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clowderhub.com/products/litter-robot-5</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
